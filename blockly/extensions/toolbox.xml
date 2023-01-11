@@ -1,0 +1,85 @@
+<category name="GuangGuang" colour="255">
+  <category name="MiniCar">
+    <block type="InitggMiniCar">
+				<value name="L1">
+					<block type="math_number">
+						<field name="NUM">25</field>
+					</block>
+				</value>
+				<value name="L2">
+					<block type="math_number">
+						<field name="NUM">26</field>
+					</block>
+				</value>
+        <field name="LeftReverse">FALSE</field>
+				<value name="R1">
+					<block type="math_number">
+						<field name="NUM">32</field>
+					</block>
+				</value>
+				<value name="R2">
+					<block type="math_number">
+						<field name="NUM">33</field>
+					</block>
+				</value>
+        <field name="RightReverse">FALSE</field>
+    </block>
+    <block type="InitggMiniCarIR">
+        <field name="IrPos">fLeft</field>
+				<value name="IrPin">
+					<block type="math_number">
+						<field name="NUM">35</field>
+					</block>
+				</value>
+    </block>
+  </category>
+
+  <category name="PS3Controller">
+    <block type="InitPS3Controller">
+      <field name="MacType">Custom</field>
+      <value name="Mac">
+		    <block type="text">
+			    <field name="TEXT">01:02:03:04:05:06</field>
+		    </block>
+			</value>
+    </block>
+    <block type="PS3IsConnect"></block>
+    <block type="PS3_Button_Event">
+      <field name="Action">down</field>
+      <field name="Button">up</field>
+    </block>
+    <block type="PS3_Analog_Event">
+      <field name="Analog">stick.lx</field>
+    </block>
+    <block type="PS3_Button_State">
+      <field name="Button">up</field>
+    </block>
+    <block type="PS3_Analog_State">
+      <field name="Analog">up</field>
+    </block>
+    <block type="PS3_Button_IsPressed">
+      <field name="Button">up</field>
+    </block>
+    <block type="PS3_Event_Callback">
+      <value name="Func_Name">
+        <block type="text">
+          <field name="TEXT">PS3EventCallback</field>
+        </block>
+      </value>
+    </block>
+    <block type="PS3_OnConnect_Callback">
+      <value name="Func_Name">
+        <block type="text">
+          <field name="TEXT">PS3OnConnectCallback</field>
+        </block>
+      </value>
+    </block>
+    <block type="PS3_DisConnect_Callback">
+      <value name="Func_Name">
+        <block type="text">
+          <field name="TEXT">PS3DisConnectCallback</field>
+        </block>
+      </value>
+    </block>
+  </category>
+</category>
