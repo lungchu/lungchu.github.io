@@ -1,6 +1,7 @@
 <category name="GuangGuang" colour="255">
-  <category name="MiniCar">
-    <block type="InitggMiniCar">
+<!-- 光光小車 -->
+  <category name="ggMiniCar">
+    <block type="ggMiniCarInit">
 				<value name="L1">
 					<block type="math_number">
 						<field name="NUM">25</field>
@@ -24,7 +25,20 @@
 				</value>
         <field name="RightReverse">FALSE</field>
     </block>
-    <block type="InitggMiniCarIR">
+    <block type="ggMiniCarInitUS">
+        <field name="USPos">fLeft</field>
+				<value name="USTrigPin">
+					<block type="math_number">
+						<field name="NUM">12</field>
+					</block>
+				</value>
+				<value name="USEchoPin">
+					<block type="math_number">
+						<field name="NUM">13</field>
+					</block>
+				</value>
+    </block>
+    <block type="ggMiniCarInitIR">
         <field name="IrPos">fLeft</field>
 				<value name="IrPin">
 					<block type="math_number">
@@ -32,10 +46,93 @@
 					</block>
 				</value>
     </block>
+    <block type="ggMiniCarLineAdjust">
+				<value name="LineAdjust">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+    </block>
+    <block type="ggMiniCarSetSpeed">
+				<value name="Speed">
+					<block type="math_number">
+						<field name="NUM">80</field>
+					</block>
+				</value>
+    </block>
+    <block type="ggMiniCarMove">
+			<field name="MoveType">Forward</field>
+			<field name="MyTurn">Low</field>
+			<value name="ArcSpeed">
+				<block type="math_number">
+					<field name="NUM">20</field>
+				</block>
+			</value>
+    </block>
+    <block type="ggMiniCarUSSetUnit">
+      <field name="USUnit">1</field>
+    </block>
+    <block type="ggMiniCarUSGetDistance">
+      <field name="USPos">fLeft</field>
+    </block>
+    <block type="ggMiniCarIrDetectWhite">
+      <field name="IrPos">fLeft</field>
+    </block>
   </category>
-
-  <category name="PS3Controller">
-    <block type="InitPS3Controller">
+<!-- 光光PS2 -->
+  <category name="ggPS2">
+    <block type="ggPS2Init">
+      <value name="Data">
+					<block type="math_number">
+						<field name="NUM">22</field>
+					</block>
+			</value>
+      <value name="Command">
+					<block type="math_number">
+						<field name="NUM">19</field>
+					</block>
+			</value>
+      <value name="ChipSelect">
+					<block type="math_number">
+						<field name="NUM">5</field>
+					</block>
+			</value>
+      <value name="Clock">
+					<block type="math_number">
+						<field name="NUM">18</field>
+					</block>
+			</value>
+      <field name="PR_Mode">Custom</field>
+      <field name="Pressures">TRUE</field>
+      <field name="Rumble">TRUE</field>
+    </block>
+    <block type="ggPS2_ReadGamePad">
+      <field name="Rumble">FALSE</field>
+      <value name="Strength">
+					<block type="math_number">
+						<field name="NUM">40</field>
+					</block>
+			</value>
+    </block>
+    <block type="ggPS2_Button_NewState">
+      <field name="Button">PSB_PAD_UP</field>
+    </block>
+    <block type="ggPS2_Button_Event">
+      <field name="Action">Pressed</field>
+      <field name="Button">PSB_PAD_UP</field>
+    </block>
+    <block type="ggPS2_Analog_State">
+      <field name="Analog">PSS_LX</field>
+    </block>
+    <block type="ggPS2_Button_IsPressed">
+      <field name="Button">up</field>
+    </block>
+    <block type="ggPS2_Enable_Pressures"></block>
+    <block type="ggPS2_Enable_Rumble"></block>
+  </category>
+<!-- 光光PS3 -->
+  <category name="ggPS3">
+    <block type="ggPS3Init">
       <field name="MacType">Custom</field>
       <value name="Mac">
 		    <block type="text">
@@ -43,43 +140,85 @@
 		    </block>
 			</value>
     </block>
-    <block type="PS3IsConnect"></block>
-    <block type="PS3_Button_Event">
+    <block type="ggPS3IsConnect"></block>
+    <block type="ggPS3_Button_Event">
       <field name="Action">down</field>
       <field name="Button">up</field>
     </block>
-    <block type="PS3_Analog_Event">
+    <block type="ggPS3_Analog_Event">
       <field name="Analog">stick.lx</field>
     </block>
-    <block type="PS3_Button_State">
+    <block type="ggPS3_Button_State">
       <field name="Button">up</field>
     </block>
-    <block type="PS3_Analog_State">
+    <block type="ggPS3_Analog_State">
       <field name="Analog">up</field>
     </block>
-    <block type="PS3_Button_IsPressed">
+    <block type="ggPS3_Button_IsPressed">
       <field name="Button">up</field>
     </block>
-    <block type="PS3_Event_Callback">
+    <block type="ggPS3_Event_Callback">
       <value name="Func_Name">
         <block type="text">
           <field name="TEXT">PS3EventCallback</field>
         </block>
       </value>
     </block>
-    <block type="PS3_OnConnect_Callback">
+    <block type="ggPS3_OnConnect_Callback">
       <value name="Func_Name">
         <block type="text">
           <field name="TEXT">PS3OnConnectCallback</field>
         </block>
       </value>
     </block>
-    <block type="PS3_DisConnect_Callback">
+    <block type="ggPS3_DisConnect_Callback">
       <value name="Func_Name">
         <block type="text">
           <field name="TEXT">PS3DisConnectCallback</field>
         </block>
       </value>
     </block>
+  </category>
+<!-- 光光Dabble -->
+  <category name="ggDabble">
+    <block type="ggDabble_Begin">
+      <field name="BleMode">ESP32</field>
+      <value name="BleName">
+		    <block type="text">
+			    <field name="TEXT">I.AM.GG</field>
+		    </block>
+			</value>
+      <field name="SerialMode">Serial</field>
+      <value name="Baud">
+					<block type="math_number">
+						<field name="NUM">9600</field>
+					</block>
+			</value>
+      <value name="RX">
+					<block type="math_number">
+						<field name="NUM">10</field>
+					</block>
+			</value>
+      <value name="TX">
+					<block type="math_number">
+						<field name="NUM">11</field>
+					</block>
+			</value>
+    </block>
+    <block type="ggDabble_GamePad_ProcessData"></block>
+    <category name="ggDabbleGamePad">
+      <block type="ggDabble_GamePad_KeyIsPressed">
+        <field name="Button">Up</field>
+      </block>
+      <block type="ggDabble_GamePad_KeyState">
+        <field name="ButtonState">0</field>
+      </block>
+      <block type="ggDabble_GamePad_getJoystickData">
+        <field name="getJoystickData">2</field>
+      </block>
+      <block type="ggDabble_GamePad_getJoystick">
+        <field name="getJoystick">XaxisData</field>
+      </block>
+    </category>
   </category>
 </category>
