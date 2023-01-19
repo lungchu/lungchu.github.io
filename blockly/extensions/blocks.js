@@ -440,6 +440,29 @@ Blockly.Blocks['ggPS3_DisConnect_Callback'] = {
     this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['ggPS3_GGPS3_MAC'] = {
+  init: function() {
+    this.appendDummyInput()
+    .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_PS3_GG_MACADDR), "MAC");
+    this.setOutput(true, "");
+    this.setColour(Blockly.Msg["HUE_GG_PS3"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggPS3_YPPS3_MAC'] = {
+  init: function() {
+    this.appendDummyInput()
+    .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_PS3_YP_MACADDR), "MAC");
+    this.setOutput(true, "");
+    this.setColour(Blockly.Msg["HUE_GG_PS3"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
 // Dabble
 Blockly.Blocks['ggDabble_Begin'] = {
   init: function() {

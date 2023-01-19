@@ -146,8 +146,7 @@ Blockly.Arduino['ggPS3Init'] = function(block) {
   } else if (MacType=="Custom") {
     Blockly.Arduino.setups_['ggPS3Init'] = ''+'Ps3.begin(' + mac + ');\n';
   }
-  var code = '';
-  return code;
+  return '';
 };
 
 Blockly.Arduino['ggPS3IsConnect'] = function(block) {
@@ -191,7 +190,7 @@ Blockly.Arduino['ggPS3_Event_Callback'] = function(block) {
       FuncStatement=Blockly.Arduino.statementToCode(this,"STATEMENT");
   FuncCode=FuncCode.replace(/\"/g,"");
   Blockly.Arduino.definitions_["ggPS3_event_callback"]='void '+FuncCode+'(){\n'+FuncStatement+'}\n';
-  return'';
+  return '';
 };
 
 Blockly.Arduino['ggPS3_OnConnect_Callback'] = function(block) {
@@ -199,7 +198,7 @@ Blockly.Arduino['ggPS3_OnConnect_Callback'] = function(block) {
       b=Blockly.Arduino.statementToCode(this,"STATEMENT");
   a=a.replace(/\"/g,"");
   Blockly.Arduino.definitions_["ggPS3_OnConnect_Callback"]='void '+a+'(){\n'+b+'}\n';
-  return'';
+  return '';
 };
 
 Blockly.Arduino['ggPS3_DisConnect_Callback'] = function(block) {
@@ -207,7 +206,19 @@ Blockly.Arduino['ggPS3_DisConnect_Callback'] = function(block) {
       b=Blockly.Arduino.statementToCode(this,"STATEMENT");
   a=a.replace(/\"/g,"");
   Blockly.Arduino.definitions_["ggPS3_DisConnect_Callback"]='void '+a+'(){\n'+b+'}\n';
-  return'';
+  return '';
+};
+
+Blockly.Arduino['ggPS3_GGPS3_MAC'] = function(block) {
+  var Mac= block.getFieldValue('MAC');
+  Mac='"'+Mac+'"';
+  return Mac;
+};
+
+Blockly.Arduino['ggPS3_YPPS3_MAC'] = function(block) {
+  var Mac= block.getFieldValue('MAC');
+  Mac='"'+Mac+'"';
+  return Mac;
 };
 // Dabble
 Blockly.Arduino['ggDabble_Begin'] = function(block) {

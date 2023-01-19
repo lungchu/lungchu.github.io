@@ -178,6 +178,12 @@
         </block>
       </value>
     </block>
+    <block type="ggPS3_GGPS3_MAC">
+      <field name="MAC">52:E5:1E:87:3E:C4</field>
+    </block>
+    <block type="ggPS3_YPPS3_MAC">
+      <field name="MAC">42:CD:66:CF:4A:84</field>
+    </block>
   </category>
 <!-- 光光Dabble -->
   <category name="ggDabble">
