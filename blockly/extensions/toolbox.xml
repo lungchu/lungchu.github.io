@@ -78,6 +78,57 @@
     <block type="ggMiniCarIrDetectWhite">
       <field name="IrPos">fLeft</field>
     </block>
+<!-- ggMiniCar Servo -->
+    <category name="ggMiniCarServo">
+    <block type="ggMiniCar_servo_custom_attach">
+			<value name="PIN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="MAX">
+				<block type="math_number">
+					<field name="NUM">544</field>
+				</block>
+			</value>
+			<value name="MIN">
+				<block type="math_number">
+					<field name="NUM">2400</field>
+				</block>
+			</value>
+    </block>
+		<block type="ggMiniCar_servo_write">
+			<value name="PIN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ANGLE">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggMiniCar_servo_writeus">
+			<value name="PIN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ANGLE_US">
+				<block type="math_number">
+					<field name="NUM">1500</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggMiniCar_servo_read">
+  		<value name="PIN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+    </block>
+  </category>
   </category>
 <!-- 光光PS2 -->
   <category name="ggPS2">

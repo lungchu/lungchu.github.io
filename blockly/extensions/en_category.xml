@@ -1,6 +1,7 @@
 <xml>
 <category><name>GuangGuang</name><replace>Guang Guang Blocks</replace></category>
-<category><name>ggMiniCar</name><replace>Guang guang Mini Car</replace></category>
+<category><name>ggMiniCar</name><replace>Guang Guang Mini Car</replace></category>
+<category><name>ggMiniCarServo</name><replace>Guang Guang Servo For Mini Car</replace></category>
 <category><name>ggPS2</name><replace>PS2 Controller</replace></category>
 <category><name>ggPS3</name><replace>PS3 Controller</replace></category>
 <category><name>ggDabble</name><replace>Dabble</replace></category>

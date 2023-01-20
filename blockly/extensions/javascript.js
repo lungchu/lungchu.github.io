@@ -76,6 +76,43 @@ Blockly.Arduino['ggMiniCarIrDetectWhite'] = function(block) {
   var code = 'Trace_'+ IrPos +'.isDetectWhite()';
   return code;
 };
+//ggMiniCar Servo
+Blockly.Arduino['ggMiniCar_servo_custom_attach']=function() {
+  var a=Blockly.Arduino.valueToCode(this,"PIN",Blockly.Arduino.ORDER_ATOMIC),
+      b=Blockly.Arduino.valueToCode(this,"MAX",Blockly.Arduino.ORDER_ATOMIC),
+      c=Blockly.Arduino.valueToCode(this,"MIN",Blockly.Arduino.ORDER_ATOMIC),
+      d="";
+  Blockly.Arduino.definitions_.define_servo="#if defined(ESP32)\n  #include <ESP32Servo.h>\n#else\n  #include <Servo.h>\n#endif\n";
+  Blockly.Arduino.definitions_["define_class_servo_"+a]="Servo __myservo"+a+";";
+  void 0===Blockly.Arduino.setups_["servo_"+a]?Blockly.Arduino.setups_["servo_"+a]="__myservo"+a+".attach("+a+","+c+","+b+");":d="__myservo"+a+".attach("+a+","+c+","+b+");\n";
+  return d;
+};
+
+Blockly.Arduino['ggMiniCar_servo_write']=function() {
+  var a=Blockly.Arduino.valueToCode(this,"PIN",Blockly.Arduino.ORDER_ATOMIC),
+      b=Blockly.Arduino.valueToCode(this,"ANGLE",Blockly.Arduino.ORDER_ATOMIC)||"90";
+  Blockly.Arduino.definitions_.define_servo="#if defined(ESP32)\n  #include <ESP32Servo.h>\n#else\n  #include <Servo.h>\n#endif\n";
+  Blockly.Arduino.definitions_["define_class_servo_"+a]="Servo __myservo"+a+";";
+  Blockly.Arduino.setups_["servo_"+a]||(Blockly.Arduino.setups_["servo_"+a]="__myservo"+a+".attach("+a+");");
+  return "__myservo"+a+".write("+b+");\n";
+};
+
+Blockly.Arduino['ggMiniCar_servo_writeus']=function() {
+  var a=Blockly.Arduino.valueToCode(this,"PIN",Blockly.Arduino.ORDER_ATOMIC),
+      b=Blockly.Arduino.valueToCode(this,"ANGLE_US",Blockly.Arduino.ORDER_ATOMIC)||"1500";
+  Blockly.Arduino.definitions_.define_servo="#if defined(ESP32)\n  #include <ESP32Servo.h>\n#else\n  #include <Servo.h>\n#endif\n";
+  Blockly.Arduino.definitions_["define_class_servo_"+a]="Servo __myservo"+a+";";
+  void 0===Blockly.Arduino.setups_["servo_"+a]&&(Blockly.Arduino.setups_["servo_"+a]="__myservo"+a+".attach("+a+");");
+  return "__myservo"+a+".writeMicroseconds("+b+");\n";
+};
+
+Blockly.Arduino['ggMiniCar_servo_read']=function() {
+  var a=Blockly.Arduino.valueToCode(this,"PIN",Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_.define_servo="#if defined(ESP32)\n  #include <ESP32Servo.h>\n#else\n  #include <Servo.h>\n#endif\n";
+  Blockly.Arduino.definitions_["define_class_servo_"+a]="Servo __myservo"+a+";";
+  return ["__myservo"+a+".read()",Blockly.Arduino.ORDER_ATOMIC];
+};
+
 // PS2 Controller
 Blockly.Arduino['ggPS2Init'] = function(block) {
   var Data = Blockly.Arduino.valueToCode(block, 'Data', Blockly.Arduino.ORDER_ATOMIC);
@@ -186,26 +223,29 @@ Blockly.Arduino['ggPS3_Button_IsPressed'] = function(block) {
 };
 
 Blockly.Arduino['ggPS3_Event_Callback'] = function(block) {
-  var FuncCode=Blockly.Arduino.valueToCode(this,"Func_Name",Blockly.Arduino.ORDER_ATOMIC)||"",
+  var FuncName=Blockly.Arduino.valueToCode(this,"Func_Name",Blockly.Arduino.ORDER_ATOMIC)||"",
       FuncStatement=Blockly.Arduino.statementToCode(this,"STATEMENT");
-  FuncCode=FuncCode.replace(/\"/g,"");
-  Blockly.Arduino.definitions_["ggPS3_event_callback"]='void '+FuncCode+'(){\n'+FuncStatement+'}\n';
+  FuncName=FuncName.replace(/\"/g,"");
+  Blockly.Arduino.definitions_["ggPS3_event_callback"]='void '+FuncName+'(){\n'+FuncStatement+'}\n';
+  Blockly.Arduino.setups_['ggPS3_event_callback'] = ''+'Ps3.attach(' + FuncName + ');';
   return '';
 };
 
 Blockly.Arduino['ggPS3_OnConnect_Callback'] = function(block) {
-  var a=Blockly.Arduino.valueToCode(this,"Func_Name",Blockly.Arduino.ORDER_ATOMIC)||"",
-      b=Blockly.Arduino.statementToCode(this,"STATEMENT");
-  a=a.replace(/\"/g,"");
-  Blockly.Arduino.definitions_["ggPS3_OnConnect_Callback"]='void '+a+'(){\n'+b+'}\n';
+  var FuncName=Blockly.Arduino.valueToCode(this,"Func_Name",Blockly.Arduino.ORDER_ATOMIC)||"",
+      FuncStatement=Blockly.Arduino.statementToCode(this,"STATEMENT");
+  FuncName=FuncName.replace(/\"/g,"");
+  Blockly.Arduino.definitions_['ggPS3_OnConnect']='void '+FuncName+'(){\n'+FuncStatement+'}\n';
+  Blockly.Arduino.setups_['ggPS3_OnConnect'] = ''+'Ps3.attachOnConnect(' + FuncName + ');';
   return '';
 };
 
 Blockly.Arduino['ggPS3_DisConnect_Callback'] = function(block) {
-  var a=Blockly.Arduino.valueToCode(this,"Func_Name",Blockly.Arduino.ORDER_ATOMIC)||"",
-      b=Blockly.Arduino.statementToCode(this,"STATEMENT");
-  a=a.replace(/\"/g,"");
-  Blockly.Arduino.definitions_["ggPS3_DisConnect_Callback"]='void '+a+'(){\n'+b+'}\n';
+  var FuncName=Blockly.Arduino.valueToCode(this,"Func_Name",Blockly.Arduino.ORDER_ATOMIC)||"",
+      FuncStatement=Blockly.Arduino.statementToCode(this,"STATEMENT");
+  FuncName=FuncName.replace(/\"/g,"");
+  Blockly.Arduino.definitions_['ggPS3_OnDisConnect']='void '+FuncName+'(){\n'+FuncStatement+'}\n';
+  Blockly.Arduino.setups_['ggPS3_OnDisConnect'] = ''+'Ps3.attachOnDisconnect(' + FuncName + ');';
   return '';
 };
 

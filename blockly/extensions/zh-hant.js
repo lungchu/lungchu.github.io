@@ -1,8 +1,9 @@
 Blockly.Msg["HUE_GG_MiniCar"] = 10;
-Blockly.Msg["HUE_GG_PS2"] = 60;
-Blockly.Msg["HUE_GG_PS3"] = 110;
-Blockly.Msg["HUE_GG_PS3_EVENT"] = 160;
-Blockly.Msg["HUE_GG_DABBLE"] = 210;
+Blockly.Msg["HUE_GG_MiniCar_Servo"] = 60;
+Blockly.Msg["HUE_GG_PS2"] = 110;
+Blockly.Msg["HUE_GG_PS3"] = 160;
+Blockly.Msg["HUE_GG_PS3_EVENT"] = 210;
+Blockly.Msg["HUE_GG_DABBLE"] = 260;
 
 Blockly.Msg.GG_BUTTON="鈕"
 Blockly.Msg.GG_ISPRESSED="是按下的"

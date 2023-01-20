@@ -1,6 +1,7 @@
 <xml>
 <category><name>GuangGuang</name><replace>光光積木</replace></category>
 <category><name>ggMiniCar</name><replace>光光小車</replace></category>
+<category><name>ggMiniCarServo</name><replace>伺服馬達</replace></category>
 <category><name>ggPS2</name><replace>PS2手柄</replace></category>
 <category><name>ggPS3</name><replace>PS3手柄</replace></category>
 <category><name>ggDabble</name><replace>Dabble</replace></category>

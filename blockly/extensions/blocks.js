@@ -147,13 +147,92 @@ Blockly.Blocks['ggMiniCarUSGetDistance'] = {
   }
 };
 
-Blockly.Blocks['ggMiniCarIrDetectWhite'] = {
+Blockly.Blocks['ggMiniCarIrDetectWhite']={
   init: function() {
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_IR), "IrPos")
         .appendField(Blockly.Msg.GG_MINICAR_IR_DETECT);
     this.setOutput(true, "Boolean");
     this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
+  }
+};
+//ggMiniCar Servo
+Blockly.Blocks['ggMiniCar_servo_custom_attach']={
+	init:function(){
+		this.appendDummyInput()
+				.appendField(Blockly.Msg.SERVO_ATTACH_TEXT1);
+    this.appendValueInput("PIN")
+				.setCheck("Number");
+    this.appendDummyInput()
+				.appendField(Blockly.Msg.SERVO_ATTACH_TEXT2);
+    this.appendValueInput("MIN")
+				.setCheck("Number")
+				.appendField(Blockly.Msg.SERVO_ATTACH_MIN_TEXT1);
+		this.appendValueInput("MAX")
+				.setCheck("Number")
+				.appendField(Blockly.Msg.SERVO_ATTACH_MAX_TEXT1);
+		this.setInputsInline(!0);
+		this.setPreviousStatement(!0);
+		this.setNextStatement(!0);
+		this.setColour(Blockly.Msg["HUE_GG_MiniCar_Servo"]);
+		this.setHelpUrl(Blockly.Msg.SERVO_ATTACH_HELPURL);
+		this.setTooltip(Blockly.Msg.SERVO_ATTACH_TOOLTIP);
+	}
+};
+
+Blockly.Blocks['ggMiniCar_servo_write']={
+	init:function() {
+		this.appendDummyInput()
+				.appendField(Blockly.Msg.SERVO_WRITE_TEXT1);
+    this.appendValueInput("PIN")
+				.setCheck("Number")
+				.appendField(Blockly.Msg.SERVO_WRITE_TEXT2);
+		this.appendValueInput("ANGLE")
+				.setCheck("Number")
+				.appendField(Blockly.Msg.SERVO_ANGLE_TEXT1);
+		this.appendDummyInput().appendField(Blockly.Msg.SERVO_ANGLE_TEXT2);
+		this.setInputsInline(!0);
+		this.setPreviousStatement(!0);
+		this.setNextStatement(!0);
+		this.setColour(Blockly.Msg["HUE_GG_MiniCar_Servo"]);
+		this.setHelpUrl(Blockly.Msg.SERVO_WRITE_HELPURL);
+		this.setTooltip(Blockly.Msg.SERVO_WRITE_TOOLTIP);
+	}
+};
+
+Blockly.Blocks['ggMiniCar_servo_writeus']={
+  init:function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.SERVO_WRITE_TEXT1);
+    this.appendValueInput("PIN")
+				.setCheck("Number")
+		    .appendField(Blockly.Msg.SERVO_WRITE_TEXT2);
+    this.appendValueInput("ANGLE_US")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.SERVO_ANGLE_US_TEXT1);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.SERVO_ANGLE_US_TEXT2);
+    this.setInputsInline(!0);
+    this.setPreviousStatement(!0);
+    this.setNextStatement(!0);
+    this.setColour(Blockly.Msg["HUE_GG_MiniCar_Servo"]);
+    this.setHelpUrl(Blockly.Msg.SERVO_WRITE_US_HELPURL);
+    this.setTooltip(Blockly.Msg.SERVO_WRITE_US_TOOLTIP);
+  }
+};
+
+Blockly.Blocks['ggMiniCar_servo_read']={
+  init:function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.SERVO_READ_TEXT1);
+    this.appendValueInput("PIN")
+				.setCheck("Number")
+		    .appendField(Blockly.Msg.SERVO_READ_TEXT2);
+    this.setInputsInline(!0);
+    this.setOutput(!0,"Number");
+    this.setColour(Blockly.Msg["HUE_GG_MiniCar_Servo"]);
+    this.setHelpUrl(Blockly.Msg.SERVO_READ_HELPURL);
+    this.setTooltip(Blockly.Msg.SERVO_READ_TOOLTIP)
   }
 };
 // PS2 Controller
