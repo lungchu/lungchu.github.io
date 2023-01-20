@@ -226,8 +226,9 @@ Blockly.Blocks['ggMiniCar_servo_read']={
     this.appendDummyInput()
         .appendField(Blockly.Msg.SERVO_READ_TEXT1);
     this.appendValueInput("PIN")
-				.setCheck("Number")
-		    .appendField(Blockly.Msg.SERVO_READ_TEXT2);
+				.setCheck("Number");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.SERVO_READ_TEXT2);
     this.setInputsInline(!0);
     this.setOutput(!0,"Number");
     this.setColour(Blockly.Msg["HUE_GG_MiniCar_Servo"]);

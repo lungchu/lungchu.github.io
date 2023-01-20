@@ -83,8 +83,8 @@ Blockly.Arduino['ggMiniCar_servo_custom_attach']=function() {
       c=Blockly.Arduino.valueToCode(this,"MIN",Blockly.Arduino.ORDER_ATOMIC),
       d="";
   Blockly.Arduino.definitions_.define_servo="#if defined(ESP32)\n  #include <ESP32Servo.h>\n#else\n  #include <Servo.h>\n#endif\n";
-  Blockly.Arduino.definitions_["define_class_servo_"+a]="Servo __myservo"+a+";";
-  void 0===Blockly.Arduino.setups_["servo_"+a]?Blockly.Arduino.setups_["servo_"+a]="__myservo"+a+".attach("+a+","+c+","+b+");":d="__myservo"+a+".attach("+a+","+c+","+b+");\n";
+  Blockly.Arduino.definitions_["define_class_ggMiniCarServo_"+a]="Servo _ggMiniCarServo"+a+";";
+  void 0===Blockly.Arduino.setups_["ggMiniCarServo_"+a]?Blockly.Arduino.setups_["ggMiniCarServo_"+a]="_ggMiniCarServo"+a+".attach("+a+","+c+","+b+");":d="_ggMiniCarServo"+a+".attach("+a+","+c+","+b+");\n";
   return d;
 };
 
@@ -92,25 +92,25 @@ Blockly.Arduino['ggMiniCar_servo_write']=function() {
   var a=Blockly.Arduino.valueToCode(this,"PIN",Blockly.Arduino.ORDER_ATOMIC),
       b=Blockly.Arduino.valueToCode(this,"ANGLE",Blockly.Arduino.ORDER_ATOMIC)||"90";
   Blockly.Arduino.definitions_.define_servo="#if defined(ESP32)\n  #include <ESP32Servo.h>\n#else\n  #include <Servo.h>\n#endif\n";
-  Blockly.Arduino.definitions_["define_class_servo_"+a]="Servo __myservo"+a+";";
-  Blockly.Arduino.setups_["servo_"+a]||(Blockly.Arduino.setups_["servo_"+a]="__myservo"+a+".attach("+a+");");
-  return "__myservo"+a+".write("+b+");\n";
+  Blockly.Arduino.definitions_["define_class_ggMiniCarServo_"+a]="Servo _ggMiniCarServo"+a+";";
+  Blockly.Arduino.setups_["ggMiniCarServo_"+a]||(Blockly.Arduino.setups_["ggMiniCarServo_"+a]="_ggMiniCarServo"+a+".attach("+a+");");
+  return "_ggMiniCarServo"+a+".write("+b+");\n";
 };
 
 Blockly.Arduino['ggMiniCar_servo_writeus']=function() {
   var a=Blockly.Arduino.valueToCode(this,"PIN",Blockly.Arduino.ORDER_ATOMIC),
       b=Blockly.Arduino.valueToCode(this,"ANGLE_US",Blockly.Arduino.ORDER_ATOMIC)||"1500";
   Blockly.Arduino.definitions_.define_servo="#if defined(ESP32)\n  #include <ESP32Servo.h>\n#else\n  #include <Servo.h>\n#endif\n";
-  Blockly.Arduino.definitions_["define_class_servo_"+a]="Servo __myservo"+a+";";
-  void 0===Blockly.Arduino.setups_["servo_"+a]&&(Blockly.Arduino.setups_["servo_"+a]="__myservo"+a+".attach("+a+");");
-  return "__myservo"+a+".writeMicroseconds("+b+");\n";
+  Blockly.Arduino.definitions_["define_class_ggMiniCarServo_"+a]="Servo _ggMiniCarServo"+a+";";
+  void 0===Blockly.Arduino.setups_["ggMiniCarServo_"+a]&&(Blockly.Arduino.setups_["ggMiniCarServo_"+a]="_ggMiniCarServo"+a+".attach("+a+");");
+  return "_ggMiniCarServo"+a+".writeMicroseconds("+b+");\n";
 };
 
 Blockly.Arduino['ggMiniCar_servo_read']=function() {
   var a=Blockly.Arduino.valueToCode(this,"PIN",Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.definitions_.define_servo="#if defined(ESP32)\n  #include <ESP32Servo.h>\n#else\n  #include <Servo.h>\n#endif\n";
-  Blockly.Arduino.definitions_["define_class_servo_"+a]="Servo __myservo"+a+";";
-  return ["__myservo"+a+".read()",Blockly.Arduino.ORDER_ATOMIC];
+  Blockly.Arduino.definitions_["define_class_ggMiniCarServo_"+a]="Servo _ggMiniCarServo"+a+";";
+  return ["_ggMiniCarServo"+a+".read()",Blockly.Arduino.ORDER_ATOMIC];
 };
 
 // PS2 Controller
