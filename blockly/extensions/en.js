@@ -4,6 +4,7 @@ Blockly.Msg["HUE_GG_PS2"] = 110;
 Blockly.Msg["HUE_GG_PS3"] = 160;
 Blockly.Msg["HUE_GG_PS3_EVENT"] = 210;
 Blockly.Msg["HUE_GG_DABBLE"] = 260;
+Blockly.Msg["HUE_GG_LINKITREMOTE"] = 310;
 
 Blockly.Msg.GG_BUTTON="Button"
 Blockly.Msg.GG_ISPRESSED="is pressed"
@@ -89,3 +90,6 @@ Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONPRESS=[["UP","Up"],["DOWN","Down"],["LEFT","
 Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONSTATE=[["UP","0"],["DOWN","1"],["LEFT","2"],["RIGHT","3"],["TRIANGLE","6"],["CIRCLE","7"],["CROSS","8"],["SQUARE","9"],["SELECT","5"],["START","4"]]
 Blockly.Msg.GG_DABBLE_GAMEPAD_GETJOYSTICKDATA=[["ANGLE","0"],["RADIUS","1"],["STICK X","2"],["STICK Y","3"]]
 Blockly.Msg.GG_DABBLE_GAMEPAD_GETJOYSTICK=[["ANGLE","Angle"],["RADIUS","Radius"],["STICK X","XaxisData"],["STICK Y","YaxisData"]]
+//光光Linkit Remote
+Blockly.Msg.GG_LINKITREMOTE_SETTYPE=[[Blockly.Msg.LINKIT_SET_LREMOTE_TYPE_VERTICAL,"RC_PORTRAIT"],[Blockly.Msg.LINKIT_SET_LREMOTE_TYPE_HORIZONTAL,"RC_LANDSCAPE"]]
+Blockly.Msg.GG_LINKITREMOTE_COLORS=[[Blockly.Msg.LINKIT_LREMOTE_COLOUR_ORANGE,"orange"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_BLUE,"blue"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_GREEN,"green"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_PINK,"pink"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_GRAY,"gray"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_YELLOW,"yellow"]]

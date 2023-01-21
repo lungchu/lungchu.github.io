@@ -278,4 +278,244 @@
       </block>
     </category>
   </category>
+<!-- 光光LinkitRemote -->
+	<category id="category_ggLinkit_Remote" name="遙控器">
+		<block type="ggLinkit_Remote"> 
+			<value name="DEVICEID">
+				<block type="text">
+					<field name="TEXT">LinkIt 7697</field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">3</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">5</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_settext">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">label1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setbuttonsquare">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">button1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setbuttoncircle">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">circle1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setswitch">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">switch1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setslider">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">slider1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="MINIMUM">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="MAXIMUM">
+				<block type="math_number">
+					<field name="NUM">100</field>
+				</block>
+			</value>
+			<value name="INITIAL">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setjoystick">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">joystick1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_connect_status"></block>
+		<block type="ggLinkit_Remote_process"></block>
+		<block type="ggLinkit_Remote_is_written">
+		</block>
+		<block type="ggLinkit_Remote_read_value">
+		</block>
+		<block type="ggLinkit_Remote_update_textlabel">
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+		</block>
+	</category>
 </category>

@@ -4,6 +4,7 @@ Blockly.Msg["HUE_GG_PS2"] = 110;
 Blockly.Msg["HUE_GG_PS3"] = 160;
 Blockly.Msg["HUE_GG_PS3_EVENT"] = 210;
 Blockly.Msg["HUE_GG_DABBLE"] = 260;
+Blockly.Msg["HUE_GG_LINKITREMOTE"] = 310;
 
 Blockly.Msg.GG_BUTTON="鈕"
 Blockly.Msg.GG_ISPRESSED="是按下的"
@@ -85,3 +86,6 @@ Blockly.Msg.GG_DABBLE_GAMEPAD_GETJOYSTICKDATA=[["搖桿角度","0"],["搖桿半�
 Blockly.Msg.GG_DABBLE_GAMEPAD_GETSTICKNO="的值"
 Blockly.Msg.GG_DABBLE_GAMEPAD_GETJOYSTICK=[["搖桿角度","Angle"],["搖桿半徑","Radius"],["搖桿Ｘ","XaxisData"],["搖桿Ｙ","YaxisData"]]
 Blockly.Msg.GG_DABBLE_GAMEPAD_GETSTICKNAME="的數值"
+//光光Linkit Remote
+Blockly.Msg.GG_LINKITREMOTE_SETTYPE=[[Blockly.Msg.LINKIT_SET_LREMOTE_TYPE_VERTICAL,"RC_PORTRAIT"],[Blockly.Msg.LINKIT_SET_LREMOTE_TYPE_HORIZONTAL,"RC_LANDSCAPE"]]
+Blockly.Msg.GG_LINKITREMOTE_COLORS=[[Blockly.Msg.LINKIT_LREMOTE_COLOUR_ORANGE,"orange"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_BLUE,"blue"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_GREEN,"green"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_PINK,"pink"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_GRAY,"gray"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_YELLOW,"yellow"]]

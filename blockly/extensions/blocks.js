@@ -666,3 +666,348 @@ Blockly.Blocks['ggDabble_GamePad_getJoystick'] = {
     this.setHelpUrl("");
   }
 };
+//光光 LinkitRemote
+Blockly.Blocks['ggLinkit_Remote']={
+  init:function(){
+    this.setHelpUrl(Blockly.Msg.LINKIT_SET_LREMOTE_HELPFUL);
+    this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_SET_LREMOTE_ADD)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_LINKITREMOTE_SETTYPE),"ORIENTATION")
+        .appendField(Blockly.Msg.LINKIT_SET_LREMOTE);
+    this.appendValueInput("DEVICEID")
+        .setCheck("String")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.LINKIT_SET_LREMOTE_DEVICEID);
+    this.appendValueInput("COLUMN")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.LINKIT_SET_LREMOTE_COLUMN);
+    this.appendValueInput("ROW")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.LINKIT_SET_LREMOTE_ROW);
+    this.appendStatementInput("CONTENT");
+    this.setPreviousStatement(!0);
+    this.setNextStatement(!0);
+    this.setTooltip(Blockly.Msg.LINKIT_SET_LREMOTE_TOOLTIP)
+  }
+};
+
+Blockly.Blocks['ggLinkit_Remote_settext']={
+  init:function(){
+    this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_CONTROL_HELPFUL);
+    this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_ADD)
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETTEXT);
+    this.appendValueInput("NAME")
+        .setCheck("String");
+    this.appendValueInput("CONTENT")
+        .setCheck("String")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETTEXT_CONTENT);
+    this.appendValueInput("COLUMN")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETTEXT_SITE);
+    this.appendValueInput("ROW")
+        .setCheck("Number");
+    this.appendValueInput("WIDTH")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETTEXT_SIZE);
+    this.appendValueInput("HEIGHT")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_COLOUR)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_LINKITREMOTE_COLORS),"COLOUR");
+    this.setInputsInline(!0);
+    this.setPreviousStatement(!0);
+    this.setNextStatement(!0);
+    this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_SETTEXT_TOOLTIP)
+  }
+};
+
+Blockly.Blocks['ggLinkit_Remote_setbuttonsquare']={
+	init:function(){
+		this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_CONTROL_HELPFUL);
+		this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+		this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_ADD)
+				.appendField(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONSQUARE);
+		this.appendValueInput("NAME")
+        .setCheck("String");
+    this.appendValueInput("CONTENT")
+        .setCheck("String")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONSQUARE_CONTENT);
+    this.appendValueInput("COLUMN")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONSQUARE_SITE);
+    this.appendValueInput("ROW")
+        .setCheck("Number");
+    this.appendDummyInput();
+    this.appendValueInput("WIDTH")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONSQUARE_SIZE);
+    this.appendValueInput("HEIGHT")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_COLOUR)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_LINKITREMOTE_COLORS),"COLOUR");
+    this.setInputsInline(!0);
+    this.setPreviousStatement(!0);
+    this.setNextStatement(!0);
+    this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONSQUARE_TOOLTIP)
+  }
+};
+
+Blockly.Blocks['ggLinkit_Remote_setbuttoncircle']={
+  init:function(){
+    this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_CONTROL_HELPFUL);
+    this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_ADD)
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONCIRCLE);
+    this.appendValueInput("NAME")
+        .setCheck("String");
+    this.appendValueInput("CONTENT")
+        .setCheck("String")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONCIRCLE_CONTENT);
+    this.appendValueInput("COLUMN")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONCIRCLE_SITE);
+    this.appendValueInput("ROW")
+        .setCheck("Number");
+    this.appendValueInput("WIDTH")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONCIRCLE_SIZE);
+    this.appendValueInput("HEIGHT")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_COLOUR)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_LINKITREMOTE_COLORS),"COLOUR");
+    this.setInputsInline(!0);
+    this.setPreviousStatement(!0);
+    this.setNextStatement(!0);
+    this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_SETBUTTONCIRCLE_TOOLTIP)
+  }
+};
+
+Blockly.Blocks['ggLinkit_Remote_setswitch']={
+  init:function(){
+    this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_CONTROL_HELPFUL);
+    this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_ADD)
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSWITCH);
+    this.appendValueInput("NAME")
+        .setCheck("String");
+    this.appendValueInput("CONTENT")
+        .setCheck("String")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSWITCH_CONTENT);
+    this.appendValueInput("COLUMN")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSWITCH_SITE);
+    this.appendValueInput("ROW")
+        .setCheck("Number");
+    this.appendValueInput("WIDTH")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSWITCH_SIZE);
+    this.appendValueInput("HEIGHT")
+        .setCheck("Number");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_COLOUR)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_LINKITREMOTE_COLORS),"COLOUR");
+    this.setInputsInline(!0);
+    this.setPreviousStatement(!0);
+    this.setNextStatement(!0);
+    this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_SETSWITCH_TOOLTIP)
+  }
+};
+
+Blockly.Blocks['ggLinkit_Remote_setslider']={init:function(){
+  this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_CONTROL_HELPFUL);
+  this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_ADD)
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSLIDER);
+  this.appendValueInput("NAME")
+      .setCheck("String");
+  this.appendValueInput("CONTENT")
+      .setCheck("String")
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSLIDER_CONTENT);
+  this.appendValueInput("COLUMN")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSLIDER_SITE);
+this.appendValueInput("ROW")
+    .setCheck("Number");
+this.appendValueInput("WIDTH")
+    .setCheck("Number")
+    .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSLIDER_SIZE);
+this.appendValueInput("HEIGHT")
+    .setCheck("Number");
+this.appendValueInput("MINIMUM")
+    .setCheck("Number")
+    .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSLIDER_MINIMUM);
+this.appendValueInput("MAXIMUM")
+    .setCheck("Number")
+    .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSLIDER_MAXIMUM);
+this.appendValueInput("INITIAL")
+    .setCheck("Number")
+    .appendField(Blockly.Msg.LINKIT_LREMOTE_SETSLIDER_INITIAL);
+this.appendDummyInput()
+    .appendField(Blockly.Msg.LINKIT_LREMOTE_COLOUR)
+    .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_LINKITREMOTE_COLORS),"COLOUR");
+this.setInputsInline(!0);
+this.setPreviousStatement(!0);
+this.setNextStatement(!0);
+this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_SETSLIDER_TOOLTIP)
+}
+};
+
+Blockly.Blocks['ggLinkit_Remote_setjoystick']={init:function(){
+  this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_CONTROL_HELPFUL);
+  this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_ADD)
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_SETJOYSTICK);
+  this.appendValueInput("NAME")
+      .setCheck("String");
+  this.appendValueInput("CONTENT")
+      .setCheck("String")
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_SETJOYSTICK_CONTENT);
+  this.appendValueInput("COLUMN")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_SETJOYSTICK_SITE);
+  this.appendValueInput("ROW")
+      .setCheck("Number");
+  this.appendValueInput("WIDTH")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_SETJOYSTICK_SIZE);
+  this.appendValueInput("HEIGHT")
+      .setCheck("Number");
+  this.appendDummyInput()
+      .appendField(Blockly.Msg.LINKIT_LREMOTE_COLOUR)
+      .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_LINKITREMOTE_COLORS),"COLOUR");
+  this.setInputsInline(!0);
+  this.setPreviousStatement(!0);
+  this.setNextStatement(!0);
+  this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_SETJOYSTICK_TOOLTIP)
+  }
+};
+
+Blockly.Blocks['ggLinkit_Remote_connect_status']={
+  init:function(){
+    this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_CONNECT_STATUS_HELPURL);
+    this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_CONNECT_STATUS);
+    this.setOutput(!0,"Boolean");
+    this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_CONNECT_STATUS_TOOLTIP)
+  }
+};
+
+Blockly.Blocks['ggLinkit_Remote_process']={
+  init:function(){
+    this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_PROCESS_HELPURL);
+    this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_PROCESS);
+    this.setPreviousStatement(!0);
+    this.setNextStatement(!0);
+    this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_PROCESS_TOOLTIP)
+  }
+};
+
+function ggLinkitRemoteGetControls(a){
+  var b=[];
+  Blockly.mainWorkspace.getAllBlocks().forEach(
+    function(d){
+      !d.isInFlyout&&a(d.type)&&(console.log("type="+d.type),
+      d=Blockly.Arduino.valueToCode(d,"NAME",Blockly.Arduino.ORDER_ATOMIC)||"",
+      d=d.slice(1,-1),d=d.trim(),console.log("blockName="+d),b.push([d,d]))}
+  );
+  0==b.length&&b.push(["-","-"]);
+  return b
+}
+
+function ggLinkitRemoteGetBlocks(){
+  return ggLinkitRemoteGetControls(
+    function(a){
+      return a.includes("ggLinkit_Remote_set")&&!a.includes("ggLinkit_Remote_settext")
+    }
+  )
+}
+
+function ggLinkitRemoteGetLables(){
+  return ggLinkitRemoteGetControls(
+    function(a){
+      return a.includes("ggLinkit_Remote_settext")
+    }
+  )
+}
+
+function ggLinkitRemoteGetReadValues(){
+  var a=[];
+  Blockly.mainWorkspace.getAllBlocks().forEach(
+    function(b){
+      var d=b.type;
+          b.isInFlyout||!d.includes("ggLinkit_Remote_set")||d.includes("ggLinkit_Remote_settext")||(
+            console.log("type="+b.type),
+            b=Blockly.Arduino.valueToCode(b,"NAME",Blockly.Arduino.ORDER_ATOMIC)||"",
+            b=b.slice(1,-1),
+            b=b.trim(),
+            d.includes("ggLinkit_Remote_setjoystick")?(console.log("joystickName="+b),
+            a.push([b+" X",b+" X"]),
+            a.push([b+" Y",b+" Y"])):(console.log("blockName="+b),a.push([b,b]))
+          )
+    }
+  );
+  0==a.length&&
+  a.push(["-","-"]);
+  return a
+}
+
+Blockly.Blocks['ggLinkit_Remote_is_written']={
+  init:function(){
+    this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_IS_WRITTEN_HELPURL);
+    this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown(ggLinkitRemoteGetBlocks),"NAME")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_IS_WRITTEN);
+    this.setInputsInline(!0);
+    this.setOutput(!0,"Boolean");
+    this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_IS_WRITTEN_TOOLTIP)
+  }
+};
+
+Blockly.Blocks['ggLinkit_Remote_read_value']={
+  init:function(){
+    this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_READ_VALUE_HELPURL);
+    this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_READ_FROM)
+        .appendField(new Blockly.FieldDropdown(ggLinkitRemoteGetReadValues),"NAME")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_READ_VALUE);
+    this.setInputsInline(!0);
+    this.setOutput(!0,["Number","String"]);
+    this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_READ_VALUE_TOOLTIP)
+  }
+};
+
+Blockly.Blocks['ggLinkit_Remote_update_textlabel']={
+  init:function(){
+    this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_UPDATE_TEXTLABEL_HELPURL);
+    this.setColour(Blockly.Msg["HUE_GG_LINKITREMOTE"]);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_UPDATE_TEXTLABEL)
+        .appendField(new Blockly.FieldDropdown(ggLinkitRemoteGetLables),"NAME");
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_TEXTLABEL);
+    this.appendValueInput("CONTENT")
+        .setCheck("String")
+        .appendField(Blockly.Msg.LINKIT_LREMOTE_UPDATE_TEXTLABEL_CONTENT);
+    this.setInputsInline(!0);
+    this.setPreviousStatement(!0);
+    this.setNextStatement(!0);
+    this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_UPDATE_TEXTLABEL_TOOLTIP)
+  }
+};
