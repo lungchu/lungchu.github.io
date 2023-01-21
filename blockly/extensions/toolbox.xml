@@ -26,7 +26,7 @@
         <field name="RightReverse">FALSE</field>
     </block>
     <block type="ggMiniCarInitUS">
-        <field name="USPos">fLeft</field>
+        <field name="SensorPos">fLeft</field>
 				<value name="USTrigPin">
 					<block type="math_number">
 						<field name="NUM">12</field>
@@ -39,7 +39,7 @@
 				</value>
     </block>
     <block type="ggMiniCarInitIR">
-        <field name="IrPos">fLeft</field>
+        <field name="SensorPos">fLeft</field>
 				<value name="IrPin">
 					<block type="math_number">
 						<field name="NUM">35</field>
@@ -73,10 +73,10 @@
       <field name="USUnit">1</field>
     </block>
     <block type="ggMiniCarUSGetDistance">
-      <field name="USPos">fLeft</field>
+      <field name="SensorPos">fLeft</field>
     </block>
     <block type="ggMiniCarIrDetectWhite">
-      <field name="IrPos">fLeft</field>
+      <field name="SensorPos">fLeft</field>
     </block>
 <!-- ggMiniCar Servo -->
     <category name="ggMiniCarServo">

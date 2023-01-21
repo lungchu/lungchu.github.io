@@ -32,7 +32,7 @@ Blockly.Blocks['ggMiniCarInitUS'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GG_MINICAR_INIT_SHOW)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_US), "USPos")
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_US), "SensorPos")
         .appendField(Blockly.Msg.GG_MINICAR_US_SHOW);
     this.appendValueInput("USTrigPin")
         .setCheck("Number")
@@ -51,7 +51,7 @@ Blockly.Blocks['ggMiniCarInitIR'] = {
   init: function() {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GG_MINICAR_INIT_SHOW)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_IR), "IrPos")
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_IR), "SensorPos")
         .appendField(Blockly.Msg.GG_MINICAR_IR_SHOW);
     this.appendValueInput("IrPin")
         .setCheck("Number")
@@ -137,20 +137,52 @@ Blockly.Blocks['ggMiniCarUSSetUnit'] = {
   }
 };
 
+function ggMiniCarGetSensorPos(a){
+  var b=[];
+  Blockly.mainWorkspace.getAllBlocks().forEach(
+    function(d){
+      !d.isInFlyout&&a(d.type)&&(console.log("type="+d.type),
+      n=d.getField("SensorPos").getText(),
+      d=d.getFieldValue("SensorPos")||"",//d=d.slice(1,-1),
+      d=d.trim(),
+      console.log("blockName="+d),
+      b.push([n,d]))}
+  );
+  0==b.length&&b.push(["-","-"]);
+  return b
+}
+
+function ggMiniCarUSGetBlocks(){
+  return ggMiniCarGetSensorPos(
+    function(a){
+      return a.includes("ggMiniCarInitUS")
+    }
+  )
+};
+
 Blockly.Blocks['ggMiniCarUSGetDistance'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_US), "USPos")
+        .appendField(new Blockly.FieldDropdown(ggMiniCarUSGetBlocks), "SensorPos")
         .appendField(Blockly.Msg.GG_MINICAR_US_GETDISTANCE);
     this.setOutput(true, "Number");
     this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
   }
 };
 
+function ggMiniCarIrGetBlocks(){
+  return ggMiniCarGetSensorPos(
+    function(a){
+      return a.includes("ggMiniCarInitIR")
+    }
+  )
+};
+
 Blockly.Blocks['ggMiniCarIrDetectWhite']={
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_IR), "IrPos")
+        //.appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_IR), "IrPos")
+        .appendField(new Blockly.FieldDropdown(ggMiniCarIrGetBlocks),"SensorPos")
         .appendField(Blockly.Msg.GG_MINICAR_IR_DETECT);
     this.setOutput(true, "Boolean");
     this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
@@ -937,14 +969,6 @@ function ggLinkitRemoteGetBlocks(){
   )
 }
 
-function ggLinkitRemoteGetLables(){
-  return ggLinkitRemoteGetControls(
-    function(a){
-      return a.includes("ggLinkit_Remote_settext")
-    }
-  )
-}
-
 function ggLinkitRemoteGetReadValues(){
   var a=[];
   Blockly.mainWorkspace.getAllBlocks().forEach(
@@ -979,6 +1003,27 @@ Blockly.Blocks['ggLinkit_Remote_is_written']={
   }
 };
 
+function ggLinkitRemoteGetReadValues(){
+  var a=[];
+  Blockly.mainWorkspace.getAllBlocks().forEach(
+    function(b){
+      var d=b.type;
+          b.isInFlyout||!d.includes("ggLinkit_Remote_set")||d.includes("ggLinkit_Remote_settext")||(
+            console.log("type="+b.type),
+            b=Blockly.Arduino.valueToCode(b,"NAME",Blockly.Arduino.ORDER_ATOMIC)||"",
+            b=b.slice(1,-1),
+            b=b.trim(),
+            d.includes("ggLinkit_Remote_setjoystick")?(console.log("joystickName="+b),
+            a.push([b+" X",b+" X"]),
+            a.push([b+" Y",b+" Y"])):(console.log("blockName="+b),a.push([b,b]))
+          )
+    }
+  );
+  0==a.length&&
+  a.push(["-","-"]);
+  return a
+}
+
 Blockly.Blocks['ggLinkit_Remote_read_value']={
   init:function(){
     this.setHelpUrl(Blockly.Msg.LINKIT_LREMOTE_READ_VALUE_HELPURL);
@@ -992,6 +1037,14 @@ Blockly.Blocks['ggLinkit_Remote_read_value']={
     this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_READ_VALUE_TOOLTIP)
   }
 };
+
+function ggLinkitRemoteGetLables(){
+  return ggLinkitRemoteGetControls(
+    function(a){
+      return a.includes("ggLinkit_Remote_settext")
+    }
+  )
+}
 
 Blockly.Blocks['ggLinkit_Remote_update_textlabel']={
   init:function(){

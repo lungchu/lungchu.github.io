@@ -13,20 +13,20 @@ Blockly.Arduino['ggMiniCarInit']=function(block) {
 };
 
 Blockly.Arduino['ggMiniCarInitUS']=function(block) {
-  var USPos = block.getFieldValue('USPos');
+  var SensorPos = block.getFieldValue('SensorPos');
   var USTrigPin = Blockly.Arduino.valueToCode(block, 'USTrigPin', Blockly.Arduino.ORDER_ATOMIC);
   var USEchoPin = Blockly.Arduino.valueToCode(block, 'USEchoPin', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.definitions_['ggMiniCarInitUS'] = '#include "GG_US.h"';
-  Blockly.Arduino.definitions_['ggMiniCarInitUS'+USPos] = 'Ultrasonic US_'+ USPos +'('+ USTrigPin +','+ USEchoPin +');';
+  Blockly.Arduino.definitions_['ggMiniCarInitUS'+SensorPos] = 'Ultrasonic US_'+ SensorPos +'('+ USTrigPin +','+ USEchoPin +');';
   var code = '';
   return code;
 };
 
 Blockly.Arduino['ggMiniCarInitIR']=function(block) {
-  var IrPos = block.getFieldValue('IrPos');
+  var SensorPos = block.getFieldValue('SensorPos');
   var IrPin = Blockly.Arduino.valueToCode(block, 'IrPin', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.definitions_['ggMiniCarInitInclude'] = '#include "GG_MiniCar.h"';
-  Blockly.Arduino.definitions_['ggMiniCarInitIr'+IrPos] = 'Trace Trace_'+ IrPos +'('+ IrPin +');';
+  Blockly.Arduino.definitions_['ggMiniCarInitIr'+SensorPos] = 'Trace Trace_'+ SensorPos +'('+ IrPin +');';
   var code = '';
   return code;
 };
@@ -66,14 +66,14 @@ Blockly.Arduino['ggMiniCarUSSetUnit']=function(block) {
 };
 
 Blockly.Arduino['ggMiniCarUSGetDistance']=function(block) {
-  var USPos = block.getFieldValue('USPos');
-  var code = 'US_'+ USPos +'.Measure()';
+  var SensorPos = block.getFieldValue('SensorPos');
+  var code = 'US_'+ SensorPos +'.Measure()';
   return code;
 };
 
 Blockly.Arduino['ggMiniCarIrDetectWhite']=function(block) {
-  var IrPos = block.getFieldValue('IrPos');
-  var code = 'Trace_'+ IrPos +'.isDetectWhite()';
+  var SensorPos = block.getFieldValue('SensorPos');
+  var code = 'Trace_'+ SensorPos +'.isDetectWhite()';
   return code;
 };
 //ggMiniCar Servo
