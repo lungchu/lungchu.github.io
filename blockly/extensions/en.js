@@ -62,8 +62,8 @@ Blockly.Msg.GG_PS2_ACTION_RELEASE_SHOW="Release"
 // PS3 Controller
 Blockly.Msg.GG_PS3_INIT_SHOW="Init PS3 Controller"
 Blockly.Msg.GG_PS3_INIT_ITEMONCHIP=[["OnChip","OnChip"],["Custom","Custom"]]
-Blockly.Msg.GG_PS3_BUTTON=[["UP","up"],["RIGHT","right"],["DOWN","down"],["LEFT","left"],["TRIANGLE","triangle"],["CIRCLE","circle"],["CROSS","cross"],["SQUARE","square"],["L1","l1"],["L2","l2"],["L3","l3"],["R1","r1"],["R2","r2"],["R3","r3"],["SELECT","select"],["START","start"],["PS","ps"]]
-Blockly.Msg.GG_PS3_ANALOG=[["Left Stick X","stick.lx"],["Left Stick Y","stick.ly"],["Right Stick X","stick.rx"],["Right Stick Y","stick.ry"],["UP","up"],["RIGHT","right"],["DOWN","down"],["LEFT","left"],["TRIANGLE","triangle"],["CIRCLE","circle"],["CROSS","cross"],["SQUARE","square"],["L1","l1"],["L2","l2"],["L3","l3"],["R1","r1"],["R2","r2"]]
+Blockly.Msg.GG_PS3_BUTTON=[["UP","up"],["DOWN","down"],["LEFT","left"],["RIGHT","right"],["TRIANGLE","triangle"],["CROSS","cross"],["SQUARE","square"],["CIRCLE","circle"],["L1","l1"],["L2","l2"],["L3","l3"],["R1","r1"],["R2","r2"],["R3","r3"],["SELECT","select"],["START","start"],["PS","ps"]]
+Blockly.Msg.GG_PS3_ANALOG=[["Left Stick X","stick.lx"],["Left Stick Y","stick.ly"],["Right Stick X","stick.rx"],["Right Stick Y","stick.ry"],["UP","button.up"],["DOWN","button.down"],["LEFT","button.left"],["RIGHT","button.right"],["TRIANGLE","button.triangle"],["CROSS","button.cross"],["SQUARE","button.square"],["CIRCLE","button.circle"],["L1","button.l1"],["L2","button.l2"],["R1","button.r1"],["R2","button.r2"]]
 Blockly.Msg.GG_PS3_ACTION=[["Press","down"],["Release","up"]]
 Blockly.Msg.GG_PS3_BUTTON_STATE_SHOW="State"
 Blockly.Msg.GG_PS3_BUTTON_ANALOG_SHOW="Analog Value"

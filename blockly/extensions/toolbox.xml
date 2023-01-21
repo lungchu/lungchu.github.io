@@ -2,63 +2,63 @@
 <!-- 光光小車 -->
   <category name="ggMiniCar">
     <block type="ggMiniCarInit">
-				<value name="L1">
-					<block type="math_number">
-						<field name="NUM">25</field>
-					</block>
-				</value>
-				<value name="L2">
-					<block type="math_number">
-						<field name="NUM">26</field>
-					</block>
-				</value>
-        <field name="LeftReverse">FALSE</field>
-				<value name="R1">
-					<block type="math_number">
-						<field name="NUM">32</field>
-					</block>
-				</value>
-				<value name="R2">
-					<block type="math_number">
-						<field name="NUM">33</field>
-					</block>
-				</value>
-        <field name="RightReverse">FALSE</field>
+			<value name="L1">
+				<block type="math_number">
+					<field name="NUM">25</field>
+				</block>
+			</value>
+			<value name="L2">
+			<block type="math_number">
+				<field name="NUM">26</field>
+			</block>
+			</value>
+       <field name="LeftReverse">FALSE</field>
+			<value name="R1">
+				<block type="math_number">
+					<field name="NUM">32</field>
+				</block>
+			</value>
+			<value name="R2">
+				<block type="math_number">
+					<field name="NUM">33</field>
+				</block>
+			</value>
+       <field name="RightReverse">FALSE</field>
     </block>
     <block type="ggMiniCarInitUS">
-        <field name="SensorPos">fLeft</field>
-				<value name="USTrigPin">
-					<block type="math_number">
-						<field name="NUM">12</field>
-					</block>
-				</value>
-				<value name="USEchoPin">
-					<block type="math_number">
-						<field name="NUM">13</field>
-					</block>
-				</value>
+      <field name="SensorPos">fLeft</field>
+			<value name="USTrigPin">
+				<block type="math_number">
+					<field name="NUM">12</field>
+				</block>
+			</value>
+			<value name="USEchoPin">
+				<block type="math_number">
+					<field name="NUM">13</field>
+				</block>
+			</value>
     </block>
     <block type="ggMiniCarInitIR">
-        <field name="SensorPos">fLeft</field>
-				<value name="IrPin">
-					<block type="math_number">
-						<field name="NUM">35</field>
-					</block>
-				</value>
+      <field name="SensorPos">fLeft</field>
+			<value name="IrPin">
+				<block type="math_number">
+					<field name="NUM">35</field>
+				</block>
+			</value>
     </block>
     <block type="ggMiniCarLineAdjust">
-				<value name="LineAdjust">
-					<block type="math_number">
-						<field name="NUM">0</field>
-					</block>
-				</value>
+			<value name="LineAdjust">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
     </block>
     <block type="ggMiniCarSetSpeed">
-				<value name="Speed">
-					<block type="math_number">
-						<field name="NUM">80</field>
-					</block>
-				</value>
+			<value name="Speed">
+				<block type="math_number">
+					<field name="NUM">80</field>
+				</block>
+			</value>
     </block>
     <block type="ggMiniCarMove">
 			<field name="MoveType">Forward</field>
@@ -134,24 +134,24 @@
   <category name="ggPS2">
     <block type="ggPS2Init">
       <value name="Data">
-					<block type="math_number">
-						<field name="NUM">22</field>
-					</block>
+				<block type="math_number">
+					<field name="NUM">22</field>
+				</block>
 			</value>
       <value name="Command">
-					<block type="math_number">
-						<field name="NUM">19</field>
-					</block>
+				<block type="math_number">
+					<field name="NUM">19</field>
+				</block>
 			</value>
       <value name="ChipSelect">
-					<block type="math_number">
-						<field name="NUM">5</field>
-					</block>
+				<block type="math_number">
+					<field name="NUM">5</field>
+				</block>
 			</value>
       <value name="Clock">
-					<block type="math_number">
-						<field name="NUM">18</field>
-					</block>
+				<block type="math_number">
+					<field name="NUM">18</field>
+				</block>
 			</value>
       <field name="PR_Mode">Custom</field>
       <field name="Pressures">TRUE</field>
@@ -160,9 +160,9 @@
     <block type="ggPS2_ReadGamePad">
       <field name="Rumble">FALSE</field>
       <value name="Strength">
-					<block type="math_number">
-						<field name="NUM">40</field>
-					</block>
+				<block type="math_number">
+					<field name="NUM">40</field>
+				</block>
 			</value>
     </block>
     <block type="ggPS2_Button_NewState">
@@ -203,7 +203,7 @@
       <field name="Button">up</field>
     </block>
     <block type="ggPS3_Analog_State">
-      <field name="Analog">up</field>
+      <field name="Analog">stick.lx</field>
     </block>
     <block type="ggPS3_Button_IsPressed">
       <field name="Button">up</field>
@@ -247,19 +247,19 @@
 			</value>
       <field name="SerialMode">Serial</field>
       <value name="Baud">
-					<block type="math_number">
-						<field name="NUM">9600</field>
-					</block>
+				<block type="math_number">
+					<field name="NUM">9600</field>
+				</block>
 			</value>
       <value name="RX">
-					<block type="math_number">
-						<field name="NUM">10</field>
-					</block>
+				<block type="math_number">
+					<field name="NUM">10</field>
+				</block>
 			</value>
       <value name="TX">
-					<block type="math_number">
-						<field name="NUM">11</field>
-					</block>
+				<block type="math_number">
+					<field name="NUM">11</field>
+				</block>
 			</value>
     </block>
     <block type="ggDabble_GamePad_ProcessData"></block>

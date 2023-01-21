@@ -199,7 +199,7 @@ Blockly.Arduino['ggPS3_Button_Event']=function(block) {
 };
 
 Blockly.Arduino['ggPS3_Analog_Event']=function(block) {
-  var Button = block.getFieldValue('Analog');
+  var Analog = block.getFieldValue('Analog');
   var code = 'Ps3.event.analog_changed.' + Analog;
   return [code, Blockly.Arduino.ORDER_NONE];
 };

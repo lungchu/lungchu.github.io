@@ -58,8 +58,8 @@ Blockly.Msg.GG_PS2_ENABLE_RUMBLE="啟用振動"
 // PS3手柄
 Blockly.Msg.GG_PS3_INIT_SHOW = "啟用PS3手柄";
 Blockly.Msg.GG_PS3_INIT_ITEMONCHIP=[["晶片","OnChip"],["自定","Custom"]];
-Blockly.Msg.GG_PS3_BUTTON=[["上","up"],["右","right"],["下","down"],["左","left"],["三角","triangle"],["圓","circle"],["叉","cross"],["方","square"],["左1","l1"],["左2","l2"],["左3","l3"],["右1","r1"],["右2","r2"],["右3","r3"],["SELECT","select"],["START","start"],["PS","ps"]]
-Blockly.Msg.GG_PS3_ANALOG=[["左搖桿X","stick.lx"],["左搖桿Y","stick.ly"],["右搖桿X","stick.rx"],["右搖桿Y","stick.ry"],["上","up"],["右","right"],["下","down"],["左","left"],["三角","triangle"],["圓","circle"],["叉","cross"],["方","square"],["左1","l1"],["左2","l2"],["左3","l3"],["右1","r1"],["右2","r2"]]
+Blockly.Msg.GG_PS3_BUTTON=[["上","up"],["下","down"],["左","left"],["右","right"],["三角","triangle"],["叉","cross"],["方","square"],["圓","circle"],["左1","l1"],["左2","l2"],["左3","l3"],["右1","r1"],["右2","r2"],["右3","r3"],["SELECT","select"],["START","start"],["PS","ps"]]
+Blockly.Msg.GG_PS3_ANALOG=[["左搖桿X","stick.lx"],["左搖桿Y","stick.ly"],["右搖桿X","stick.rx"],["右搖桿Y","stick.ry"],["上","button.up"],["下","button.down"],["左","button.left"],["右","button.right"],["三角","button.triangle"],["叉","button.cross"],["方","button.square"],["圓","button.circle"],["左1","button.l1"],["左2","button.l2"],["右1","button.r1"],["右2","button.r2"]]
 Blockly.Msg.GG_PS3_ACTION=[["按下","down"],["放開","up"]]
 Blockly.Msg.GG_PS3_BUTTON_STATE_SHOW="狀態"
 Blockly.Msg.GG_PS3_ANALOGCHANGE_SHOW="變化量"
