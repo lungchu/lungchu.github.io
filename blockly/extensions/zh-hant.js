@@ -48,11 +48,11 @@ Blockly.Msg.GG_PS2_PRESSURES="壓力感應"
 Blockly.Msg.GG_PS2_RUMBLE="振動"
 Blockly.Msg.GG_PS2_READGAMEPAD="與PS2手柄同步"
 Blockly.Msg.GG_PS2_RUMBLE_STRENGTH="振動強度"
-Blockly.Msg.GG_PS2_BUTTON_NEWSTATE=[["任一鍵",""],["上","PSB_PAD_UP"],["下","PSB_PAD_DOWN"],["左","PSB_PAD_LEFT"],["右","PSB_PAD_RIGHT"],["角","PSB_TRIANGLE"],["圓","PSB_CIRCLE"],["叉","PSB_CROSS"],["方","PSB_SQUARE"],["左1","PSB_L1"],["左2","PSB_L2"],["左3","PSB_L3"],["右1","PSB_R1"],["右2","PSB_R2"],["右3","PSB_R3"],["SELECT","PSB_SELECT"],["START","PSB_START"],["綠","PSB_GREEN"],["紅","PSB_RED"],["藍","PSB_BLUE"],["粉","PSB_PINK"]]
+Blockly.Msg.GG_PS2_BUTTON_NEWSTATE=[["任一鍵",""],["上","PSB_PAD_UP"],["下","PSB_PAD_DOWN"],["左","PSB_PAD_LEFT"],["右","PSB_PAD_RIGHT"],["角","PSB_TRIANGLE"],["叉","PSB_CROSS"],["方","PSB_SQUARE"],["圓","PSB_CIRCLE"],["左1","PSB_L1"],["左2","PSB_L2"],["左3","PSB_L3"],["右1","PSB_R1"],["右2","PSB_R2"],["右3","PSB_R3"],["SELECT","PSB_SELECT"],["START","PSB_START"],["綠","PSB_GREEN"],["藍","PSB_BLUE"],["粉","PSB_PINK"],["紅","PSB_RED"]]
 Blockly.Msg.GG_PS2_NEWSTATE="狀態已更新"
-Blockly.Msg.GG_PS2_BUTTON=[["上","PSB_PAD_UP"],["下","PSB_PAD_DOWN"],["左","PSB_PAD_LEFT"],["右","PSB_PAD_RIGHT"],["角","PSB_TRIANGLE"],["圓","PSB_CIRCLE"],["叉","PSB_CROSS"],["方","PSB_SQUARE"],["左1","PSB_L1"],["左2","PSB_L2"],["左3","PSB_L3"],["右1","PSB_R1"],["右2","PSB_R2"],["右3","PSB_R3"],["SELECT","PSB_SELECT"],["START","PSB_START"],["綠","PSB_GREEN"],["紅","PSB_RED"],["藍","PSB_BLUE"],["粉","PSB_PINK"]]
-Blockly.Msg.GG_PS2_ANALOG=[["左搖桿X","PSS_LX"],["左搖桿Y","PSS_LY"],["右搖桿X","PSS_RX"],["右搖桿Y","PSS_RY"],["上","PSAB_PAD_UP"],["右","PSAB_PAD_DOWN"],["下","PSAB_PAD_LEFT"],["左","PSAB_PAD_RIGHT"],["角","PSAB_TRIANGLE"],["圓","PSAB_CIRCLE"],["叉","PSAB_CROSS"],["方","PSAB_SQUARE"],["左1","PSAB_L2"],["左2","PSAB_L1"],["右1","PSAB_R1"],["右2","PSAB_R2"],["綠","PSAB_GREEN"],["紅","PSAB_RED"],["藍","PSAB_BLUE"],["粉","PSAB_PINK"]]
-Blockly.Msg.GG_PS2_ACTION=[["按下","down"],["放開","up"]]
+Blockly.Msg.GG_PS2_BUTTON=[["上","PSB_PAD_UP"],["下","PSB_PAD_DOWN"],["左","PSB_PAD_LEFT"],["右","PSB_PAD_RIGHT"],["角","PSB_TRIANGLE"],["叉","PSB_CROSS"],["方","PSB_SQUARE"],["圓","PSB_CIRCLE"],["左1","PSB_L1"],["左2","PSB_L2"],["左3","PSB_L3"],["右1","PSB_R1"],["右2","PSB_R2"],["右3","PSB_R3"],["SELECT","PSB_SELECT"],["START","PSB_START"],["綠","PSB_GREEN"],["藍","PSB_BLUE"],["粉","PSB_PINK"],["紅","PSB_RED"]]
+Blockly.Msg.GG_PS2_ANALOG=[["左搖桿X","PSS_LX"],["左搖桿Y","PSS_LY"],["右搖桿X","PSS_RX"],["右搖桿Y","PSS_RY"],["上","PSAB_PAD_UP"],["下","PSAB_PAD_DOWN"],["左","PSAB_PAD_LEFT"],["右","PSAB_PAD_RIGHT"],["角","PSAB_TRIANGLE"],["叉","PSAB_CROSS"],["方","PSAB_SQUARE"],["圓","PSAB_CIRCLE"],["左1","PSAB_L2"],["左2","PSAB_L1"],["右1","PSAB_R1"],["右2","PSAB_R2"],["綠","PSAB_GREEN"],["藍","PSAB_BLUE"],["粉","PSAB_PINK"],["紅","PSAB_RED"]]
+Blockly.Msg.GG_PS2_ACTION=[["按下","Pressed"],["放開","Released"]]
 Blockly.Msg.GG_PS2_ENABLE_PRESSURES="啟用壓力感應"
 Blockly.Msg.GG_PS2_ENABLE_RUMBLE="啟用振動"
 // PS3手柄
