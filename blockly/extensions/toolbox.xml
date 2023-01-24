@@ -135,7 +135,7 @@
     <block type="ggPS2Init">
       <value name="Data">
 				<block type="math_number">
-					<field name="NUM">22</field>
+					<field name="NUM">23</field>
 				</block>
 			</value>
       <value name="Command">
