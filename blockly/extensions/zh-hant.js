@@ -79,8 +79,8 @@ Blockly.Msg.GG_DABBLE_BAUD="通訊鮑率="
 Blockly.Msg.GG_DABBLE_RX_PIN="RX接腳位"
 Blockly.Msg.GG_DABBLE_TX_PIN="TX接腳位"
 Blockly.Msg.GG_DABBLE_PROCESSDATA="處理手機程式指令"
-Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONPRESS=[["上","Up"],["下","Down"],["左","Left"],["右","Right"],["三角","Triangle"],["圓","Circle"],["叉","Cross"],["方","Square"],["SELECT","Select"],["START","Start"]]
-Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONSTATE=[["上","0"],["下","1"],["左","2"],["右","3"],["三角","6"],["圓","7"],["叉","8"],["方","9"],["SELECT","5"],["START","4"]]
+Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONPRESS=[["上","Up"],["下","Down"],["左","Left"],["右","Right"],["三角","Triangle"],["叉","Cross"],["方","Square"],["圓","Circle"],["SELECT","Select"],["START","Start"]]
+Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONSTATE=[["上","0"],["下","1"],["左","2"],["右","3"],["三角","6"],["叉","8"],["方","9"],["圓","7"],["SELECT","5"],["START","4"]]
 Blockly.Msg.GG_DABBLE_GAMEPAD_STATE="鈕的狀態"
 Blockly.Msg.GG_DABBLE_GAMEPAD_GETJOYSTICKDATA=[["搖桿角度","0"],["搖桿半徑","1"],["搖桿Ｘ","2"],["搖桿Ｙ","3"]]
 Blockly.Msg.GG_DABBLE_GAMEPAD_GETSTICKNO="的值"

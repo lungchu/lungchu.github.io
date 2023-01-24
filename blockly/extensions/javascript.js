@@ -266,7 +266,7 @@ Blockly.Arduino['ggDabble_Begin']=function(block) {
   if (BleMode=="ESP32") {
     var BleName = Blockly.Arduino.valueToCode(block, 'BleName', Blockly.Arduino.ORDER_ATOMIC);
     Blockly.Arduino.definitions_["ggDabble_Begin"]='#define CUSTOM_SETTINGS\n#define INCLUDE_GAMEPAD_MODULE\n#include <DabbleESP32.h>';
-    Blockly.Arduino.setups_['ggDabble_Begin'] = 'Dabble.begin("'+ BleName +'");\n';
+    Blockly.Arduino.setups_['ggDabble_Begin'] = 'Dabble.begin("'+ BleName.replace(/"/g,"") +'");\n';
   } else if (BleMode=="Serial") {
     Blockly.Arduino.definitions_["ggDabble_Begin"]='#define CUSTOM_SETTINGS\n#define INCLUDE_GAMEPAD_MODULE\n#include <Dabble.h>';
     var SerialMode = block.getFieldValue('SerialMode');

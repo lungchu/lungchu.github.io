@@ -86,8 +86,8 @@ Blockly.Msg.GG_DABBLE_BAUD="Baud="
 Blockly.Msg.GG_DABBLE_RX_PIN="RX PIN"
 Blockly.Msg.GG_DABBLE_TX_PIN="TX PIN"
 Blockly.Msg.GG_DABBLE_PROCESSDATA="Process Data"
-Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONPRESS=[["UP","Up"],["DOWN","Down"],["LEFT","Left"],["RIGHT","Right"],["TRIANGLE","Triangle"],["CIRCLE","Circle"],["CROSS","Cross"],["SQUARE","Square"],["SELECT","Select"],["START","Start"]]
-Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONSTATE=[["UP","0"],["DOWN","1"],["LEFT","2"],["RIGHT","3"],["TRIANGLE","6"],["CIRCLE","7"],["CROSS","8"],["SQUARE","9"],["SELECT","5"],["START","4"]]
+Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONPRESS=[["UP","Up"],["DOWN","Down"],["LEFT","Left"],["RIGHT","Right"],["TRIANGLE","Triangle"],["CROSS","Cross"],["SQUARE","Square"],["CIRCLE","Circle"],["SELECT","Select"],["START","Start"]]
+Blockly.Msg.GG_DABBLE_GAMEPAD_BUTTONSTATE=[["UP","0"],["DOWN","1"],["LEFT","2"],["RIGHT","3"],["TRIANGLE","6"],["CROSS","8"],["SQUARE","9"],["CIRCLE","7"],["SELECT","5"],["START","4"]]
 Blockly.Msg.GG_DABBLE_GAMEPAD_GETJOYSTICKDATA=[["ANGLE","0"],["RADIUS","1"],["STICK X","2"],["STICK Y","3"]]
 Blockly.Msg.GG_DABBLE_GAMEPAD_GETJOYSTICK=[["ANGLE","Angle"],["RADIUS","Radius"],["STICK X","XaxisData"],["STICK Y","YaxisData"]]
 //光光Linkit Remote
