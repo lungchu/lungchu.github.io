@@ -26,7 +26,7 @@
        <field name="RightReverse">FALSE</field>
     </block>
     <block type="ggMiniCarInitUS">
-      <field name="SensorPos">fLeft</field>
+      <field name="SensorPos">Left</field>
 			<value name="USTrigPin">
 				<block type="math_number">
 					<field name="NUM">12</field>
@@ -40,10 +40,36 @@
     </block>
     <block type="ggMiniCarInitIR">
       <field name="SensorPos">fLeft</field>
-			<value name="IrPin">
-				<block type="math_number">
-					<field name="NUM">35</field>
-				</block>
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">21</field>
+				</shadow>
+			</value>
+    </block>
+    <block type="ggMiniCarInitVL53L0X">
+      <field name="SensorPos">Left</field>
+			<field name="I2CAddr">48</field>
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">21</field>
+				</shadow>
+			</value>
+    </block>
+    <block type="ggMiniCarInitSharpIR">
+      <field name="SensorPos">Left</field>
+			<field name="SharpModel">1</field>
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">21</field>
+				</shadow>
+			</value>
+    </block>
+    <block type="ggMiniCarInitAvoidIR">
+      <field name="SensorPos">Left</field>
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">21</field>
+				</shadow>
 			</value>
     </block>
     <block type="ggMiniCarLineAdjust">
@@ -77,6 +103,44 @@
     </block>
     <block type="ggMiniCarIrDetectWhite">
       <field name="SensorPos">fLeft</field>
+    </block>
+    <block type="ggMiniCarVL53L0XGetDistance">
+      <field name="SensorPos">Left</field>
+    </block>
+    <block type="ggMiniCarSharpIRGetDistance">
+      <field name="SensorPos">Left</field>
+    </block>
+    <block type="ggMiniCarAvoidIRDetectBlack">
+      <field name="SensorPos">Left</field>
+    </block>
+    <block type="ggMiniCarStickOrigin">
+    	<value name="X">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
+    	<value name="Y">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
+    	<value name="Radius">
+		    <shadow type="math_number">
+			    <field name="NUM">127</field>
+		    </shadow>
+		  </value> 	  
+    </block>
+    <block type="ggMiniCarStickDrive">
+    	<value name="SitckX">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
+    	<value name="SitckY">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
     </block>
 <!-- ggMiniCar Servo -->
     <category name="ggMiniCarServo">
