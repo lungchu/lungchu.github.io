@@ -40,16 +40,16 @@
     </block>
     <block type="ggMiniCarInitIR">
       <field name="SensorPos">fLeft</field>
-			<value name="PIN">
-				<shadow type="math_number">
-					<field name="NUM">21</field>
-				</shadow>
+			<value name="IrPin">
+				<block type="math_number">
+					<field name="NUM">35</field>
+				</block>
 			</value>
     </block>
     <block type="ggMiniCarInitVL53L0X">
       <field name="SensorPos">Left</field>
 			<field name="I2CAddr">48</field>
-			<value name="PIN">
+			<value name="xShut">
 				<shadow type="math_number">
 					<field name="NUM">21</field>
 				</shadow>
@@ -58,14 +58,6 @@
     <block type="ggMiniCarInitSharpIR">
       <field name="SensorPos">Left</field>
 			<field name="SharpModel">1</field>
-			<value name="PIN">
-				<shadow type="math_number">
-					<field name="NUM">21</field>
-				</shadow>
-			</value>
-    </block>
-    <block type="ggMiniCarInitAvoidIR">
-      <field name="SensorPos">Left</field>
 			<value name="PIN">
 				<shadow type="math_number">
 					<field name="NUM">21</field>
@@ -103,15 +95,6 @@
     </block>
     <block type="ggMiniCarIrDetectWhite">
       <field name="SensorPos">fLeft</field>
-    </block>
-    <block type="ggMiniCarVL53L0XGetDistance">
-      <field name="SensorPos">Left</field>
-    </block>
-    <block type="ggMiniCarSharpIRGetDistance">
-      <field name="SensorPos">Left</field>
-    </block>
-    <block type="ggMiniCarAvoidIRDetectBlack">
-      <field name="SensorPos">Left</field>
     </block>
     <block type="ggMiniCarStickOrigin">
     	<value name="X">

@@ -37,6 +37,9 @@ Blockly.Msg.GG_MINICAR_US_UNIT_SHOW="Set Ultrasonic measure unit to"
 Blockly.Msg.GG_MINICAR_US_UNIT=[["inch","0"],["centermeter","1"],["millimeter","2"]]
 Blockly.Msg.GG_MINICAR_US_GETDISTANCE="Ultrasonic Get Distance"
 Blockly.Msg.GG_MINICAR_IR_DETECT="Trace Detect White"
+Blockly.Msg.GG_MINICAR_STICK_INIT="Set JoyStick Origin"
+Blockly.Msg.GG_MINICAR_STICK_RADIUS="Radius"
+Blockly.Msg.GG_MINICAR_STICK_DRIVE="Use JoyStick Drive Mini Car Stick"
 // PS2 Controller
 Blockly.Msg.GG_PS2_INIT_SHOW="Init PS2 Controller"
 Blockly.Msg.GG_PS2_INIT_DATPIN="DAT Pin="

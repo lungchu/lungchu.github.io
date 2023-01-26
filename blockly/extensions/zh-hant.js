@@ -38,6 +38,16 @@ Blockly.Msg.GG_MINICAR_US_UNIT_SHOW="設定超音波測量單位為"
 Blockly.Msg.GG_MINICAR_US_UNIT=[["英吋","0"],["公分","1"],["公釐","2"]]
 Blockly.Msg.GG_MINICAR_US_GETDISTANCE="超音波測距"
 Blockly.Msg.GG_MINICAR_IR_DETECT="循跡偵測到白線"
+Blockly.Msg.GG_MINICAR_STICK_INIT="設定搖桿 中心點"
+Blockly.Msg.GG_MINICAR_STICK_RADIUS="半徑"
+Blockly.Msg.GG_MINICAR_STICK_DRIVE="使用搖桿操控光光小車 搖桿"
+Blockly.Msg.GG_MINICAR_VL53L0X="雷射測距VL53L0X i2c位址="
+Blockly.Msg.GG_MINICAR_VL53L0X_ADDR=[["0x30","48"],["0x31","49"],["0x32","50"]]
+Blockly.Msg.GG_MINICAR_VL53L0X_XSHUT="xshut接腳位"
+Blockly.Msg.GG_MINICAR_SHARPIR_SHOW="夏普紅外線測距 型號:"
+Blockly.Msg.GG_MINICAR_SHARPIR_MODEL=[["GP2Y0A51SK0F","1"],["GP2Y0A41SK0F","2"],["GP2Y0A21YK0F","3"],["GP2Y0A60SZLF","4"],["GP2Y0A02YK0F","5"],["GP2Y0A710K0F","6"]]
+Blockly.Msg.GG_MINICAR_SHARPIR_PIN="引腳接腳位"
+
 // PS2手柄
 Blockly.Msg.GG_PS2_INIT_SHOW = "啟用PS2手柄";
 Blockly.Msg.GG_PS2_INIT_DATPIN="DAT(MOSI)接腳位"

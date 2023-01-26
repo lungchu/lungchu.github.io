@@ -76,6 +76,21 @@ Blockly.Arduino['ggMiniCarIrDetectWhite']=function(block) {
   var code = 'Trace_'+ SensorPos +'.isDetectWhite()';
   return code;
 };
+
+Blockly.Arduino['ggMiniCarStickOrigin']=function(block) {
+  var X=Blockly.Arduino.valueToCode(this,"X",Blockly.Arduino.ORDER_ATOMIC),
+      Y=Blockly.Arduino.valueToCode(this,"Y",Blockly.Arduino.ORDER_ATOMIC),
+      Radius=Blockly.Arduino.valueToCode(this,"Radius",Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'ggCar.SetJoystickMiddle('+ X +','+ Y +','+ Radius +');';
+  return code;
+};
+
+Blockly.Arduino['ggMiniCarStickDrive']=function(block) {
+  var SitckX=Blockly.Arduino.valueToCode(this,"SitckX",Blockly.Arduino.ORDER_ATOMIC),
+      SitckY=Blockly.Arduino.valueToCode(this,"SitckY",Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'ggCar.JoystickDrive('+ SitckX +','+ SitckY +');';
+  return code;
+};
 //ggMiniCar Servo
 Blockly.Arduino['ggMiniCar_servo_custom_attach']=function() {
   var a=Blockly.Arduino.valueToCode(this,"PIN",Blockly.Arduino.ORDER_ATOMIC),
