@@ -1,0 +1,568 @@
+<category name="GuangGuang" colour="255">
+<!-- 光光小車 -->
+  <category name="ggMiniCar">
+    <block type="ggMiniCarInit">
+			<value name="L1">
+				<block type="math_number">
+					<field name="NUM">25</field>
+				</block>
+			</value>
+			<value name="L2">
+			<block type="math_number">
+				<field name="NUM">26</field>
+			</block>
+			</value>
+       <field name="LeftReverse">FALSE</field>
+			<value name="R1">
+				<block type="math_number">
+					<field name="NUM">32</field>
+				</block>
+			</value>
+			<value name="R2">
+				<block type="math_number">
+					<field name="NUM">33</field>
+				</block>
+			</value>
+       <field name="RightReverse">FALSE</field>
+    </block>
+    <block type="ggMiniCarInitUS">
+      <field name="SensorPos">Left</field>
+			<value name="USTrigPin">
+				<block type="math_number">
+					<field name="NUM">12</field>
+				</block>
+			</value>
+			<value name="USEchoPin">
+				<block type="math_number">
+					<field name="NUM">13</field>
+				</block>
+			</value>
+    </block>
+    <block type="ggMiniCarInitIR">
+      <field name="SensorPos">fLeft</field>
+			<value name="IrPin">
+				<block type="math_number">
+					<field name="NUM">35</field>
+				</block>
+			</value>
+    </block>
+    <block type="ggMiniCarInitVL53L0X">
+      <field name="SensorPos">Left</field>
+			<field name="I2CAddr">48</field>
+			<value name="xShut">
+				<shadow type="math_number">
+					<field name="NUM">21</field>
+				</shadow>
+			</value>
+    </block>
+    <block type="ggMiniCarInitSharpIR">
+      <field name="SensorPos">Left</field>
+			<field name="SharpModel">1</field>
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">21</field>
+				</shadow>
+			</value>
+    </block>
+    <block type="ggMiniCarLineAdjust">
+			<value name="LineAdjust">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+    </block>
+    <block type="ggMiniCarSetSpeed">
+			<value name="Speed">
+				<block type="math_number">
+					<field name="NUM">80</field>
+				</block>
+			</value>
+    </block>
+    <block type="ggMiniCarMove">
+			<field name="MoveType">Forward</field>
+			<field name="MyTurn">Low</field>
+			<value name="ArcSpeed">
+				<block type="math_number">
+					<field name="NUM">20</field>
+				</block>
+			</value>
+    </block>
+    <block type="ggMiniCarUSSetUnit">
+      <field name="USUnit">1</field>
+    </block>
+    <block type="ggMiniCarUSGetDistance">
+      <field name="SensorPos">fLeft</field>
+    </block>
+    <block type="ggMiniCarIrDetectWhite">
+      <field name="SensorPos">fLeft</field>
+    </block>
+    <block type="ggMiniCarStickOrigin">
+    	<value name="X">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
+    	<value name="Y">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
+    	<value name="Radius">
+		    <shadow type="math_number">
+			    <field name="NUM">127</field>
+		    </shadow>
+		  </value> 	  
+    </block>
+    <block type="ggMiniCarStickDrive">
+    	<value name="SitckX">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
+    	<value name="SitckY">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
+    </block>
+<!-- ggMiniCar Servo -->
+    <category name="ggMiniCarServo">
+    <block type="ggMiniCar_servo_custom_attach">
+			<value name="PIN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="MAX">
+				<block type="math_number">
+					<field name="NUM">544</field>
+				</block>
+			</value>
+			<value name="MIN">
+				<block type="math_number">
+					<field name="NUM">2400</field>
+				</block>
+			</value>
+    </block>
+		<block type="ggMiniCar_servo_write">
+			<value name="PIN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ANGLE">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggMiniCar_servo_writeus">
+			<value name="PIN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ANGLE_US">
+				<block type="math_number">
+					<field name="NUM">1500</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggMiniCar_servo_read">
+  		<value name="PIN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+    </block>
+  </category>
+  </category>
+<!-- 光光PS2 -->
+  <category name="ggPS2">
+    <block type="ggPS2Init">
+      <value name="Data">
+				<block type="math_number">
+					<field name="NUM">23</field>
+				</block>
+			</value>
+      <value name="Command">
+				<block type="math_number">
+					<field name="NUM">19</field>
+				</block>
+			</value>
+      <value name="ChipSelect">
+				<block type="math_number">
+					<field name="NUM">5</field>
+				</block>
+			</value>
+      <value name="Clock">
+				<block type="math_number">
+					<field name="NUM">18</field>
+				</block>
+			</value>
+      <field name="PR_Mode">Custom</field>
+      <field name="Pressures">TRUE</field>
+      <field name="Rumble">TRUE</field>
+    </block>
+    <block type="ggPS2_ReadGamePad">
+      <field name="Rumble">FALSE</field>
+      <value name="Strength">
+				<block type="math_number">
+					<field name="NUM">40</field>
+				</block>
+			</value>
+    </block>
+    <block type="ggPS2_Button_NewState">
+      <field name="Button">PSB_PAD_UP</field>
+    </block>
+    <block type="ggPS2_Button_Event">
+      <field name="Action">Pressed</field>
+      <field name="Button">PSB_PAD_UP</field>
+    </block>
+    <block type="ggPS2_Analog_State">
+      <field name="Analog">PSS_LX</field>
+    </block>
+    <block type="ggPS2_Button_IsPressed">
+      <field name="Button">up</field>
+    </block>
+    <block type="ggPS2_Enable_Pressures"></block>
+    <block type="ggPS2_Enable_Rumble"></block>
+  </category>
+<!-- 光光PS3 -->
+  <category name="ggPS3">
+    <block type="ggPS3Init">
+      <field name="MacType">Custom</field>
+      <value name="Mac">
+		    <block type="text">
+			    <field name="TEXT">01:02:03:04:05:06</field>
+		    </block>
+			</value>
+    </block>
+    <block type="ggPS3IsConnect"></block>
+    <block type="ggPS3_Button_Event">
+      <field name="Action">down</field>
+      <field name="Button">up</field>
+    </block>
+    <block type="ggPS3_Analog_Event">
+      <field name="Analog">stick.lx</field>
+    </block>
+    <block type="ggPS3_Button_State">
+      <field name="Button">up</field>
+    </block>
+    <block type="ggPS3_Analog_State">
+      <field name="Analog">stick.lx</field>
+    </block>
+    <block type="ggPS3_Button_IsPressed">
+      <field name="Button">up</field>
+    </block>
+    <block type="ggPS3_Event_Callback">
+      <value name="Func_Name">
+        <block type="text">
+          <field name="TEXT">PS3EventCallback</field>
+        </block>
+      </value>
+    </block>
+    <block type="ggPS3_OnConnect_Callback">
+      <value name="Func_Name">
+        <block type="text">
+          <field name="TEXT">PS3OnConnectCallback</field>
+        </block>
+      </value>
+    </block>
+    <block type="ggPS3_DisConnect_Callback">
+      <value name="Func_Name">
+        <block type="text">
+          <field name="TEXT">PS3DisConnectCallback</field>
+        </block>
+      </value>
+    </block>
+    <block type="ggPS3_GGPS3_MAC">
+      <field name="MAC">52:E5:1E:87:3E:C4</field>
+    </block>
+    <block type="ggPS3_YPPS3_MAC">
+      <field name="MAC">42:CD:66:CF:4A:84</field>
+    </block>
+  </category>
+<!-- 光光Dabble -->
+  <category name="ggDabble">
+    <block type="ggDabble_Begin">
+      <field name="BleMode">ESP32</field>
+      <value name="BleName">
+		    <block type="text">
+			    <field name="TEXT">I.AM.GG</field>
+		    </block>
+			</value>
+      <field name="SerialMode">Serial</field>
+      <value name="Baud">
+				<block type="math_number">
+					<field name="NUM">9600</field>
+				</block>
+			</value>
+      <value name="RX">
+				<block type="math_number">
+					<field name="NUM">10</field>
+				</block>
+			</value>
+      <value name="TX">
+				<block type="math_number">
+					<field name="NUM">11</field>
+				</block>
+			</value>
+    </block>
+    <block type="ggDabble_GamePad_ProcessData"></block>
+    <category name="ggDabbleGamePad">
+      <block type="ggDabble_GamePad_KeyIsPressed">
+        <field name="Button">Up</field>
+      </block>
+      <block type="ggDabble_GamePad_KeyState">
+        <field name="ButtonState">0</field>
+      </block>
+      <block type="ggDabble_GamePad_getJoystickData">
+        <field name="getJoystickData">2</field>
+      </block>
+      <block type="ggDabble_GamePad_getJoystick">
+        <field name="getJoystick">XaxisData</field>
+      </block>
+    </category>
+  </category>
+<!-- 光光LinkitRemote -->
+	<category id="category_ggLinkit_Remote" name="遙控器">
+		<block type="ggLinkit_Remote"> 
+			<value name="DEVICEID">
+				<block type="text">
+					<field name="TEXT">LinkIt 7697</field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">3</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">5</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_settext">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">label1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setbuttonsquare">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">button1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setbuttoncircle">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">circle1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setswitch">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">switch1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setslider">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">slider1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="MINIMUM">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="MAXIMUM">
+				<block type="math_number">
+					<field name="NUM">100</field>
+				</block>
+			</value>
+			<value name="INITIAL">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_setjoystick">
+			<value name="NAME">
+				<block type="text">
+					<field name="TEXT">joystick1</field>
+				</block>
+			</value>
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+			<value name="COLUMN">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="ROW">
+				<block type="math_number">
+					<field name="NUM">0</field>
+				</block>
+			</value>
+			<value name="WIDTH">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+			<value name="HEIGHT">
+				<block type="math_number">
+					<field name="NUM">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="ggLinkit_Remote_connect_status"></block>
+		<block type="ggLinkit_Remote_process"></block>
+		<block type="ggLinkit_Remote_is_written">
+		</block>
+		<block type="ggLinkit_Remote_read_value">
+		</block>
+		<block type="ggLinkit_Remote_update_textlabel">
+			<value name="CONTENT">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+		</block>
+	</category>
+</category>
