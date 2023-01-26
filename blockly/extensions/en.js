@@ -11,7 +11,20 @@ Blockly.Msg.GG_ISPRESSED="is pressed"
 Blockly.Msg.GG_JUST="Just"
 Blockly.Msg.GG_PRESS="Press"
 Blockly.Msg.GG_RELEASE="Release"
+Blockly.Msg.GG_BUTTON_ANALOG="Analog Value"
 //Guuang Guang MiniCar
+Blockly.Msg.GG_MINICAR_ARCSPEED="Turn Speed(0..Car Speed)="
+Blockly.Msg.GG_MINICAR_AVOID="Avoid"
+Blockly.Msg.GG_MINICAR_AVOID_DETECT="Avoid not detect obstacle"
+Blockly.Msg.GG_MINICAR_GETDISTANCE="Ranging"
+Blockly.Msg.GG_MINICAR_I2C_ADDR="IIC Addr"
+Blockly.Msg.GG_MINICAR_INIT="Init"
+Blockly.Msg.GG_MINICAR_IR="Infrared"
+Blockly.Msg.GG_MINICAR_IR_POS=[["Front Left","fLeft"],["Front Center","fCenter"],["Front Right","fRight"],["Rear Left","rLeft"],["Rear Center","rCenter"],["Rear Right","rRight"],["Left","Left"],["Center","Center"],["Right","Right"]]
+Blockly.Msg.GG_MINICAR_LINEADJUST_SHOW="Adjust Left Wheel Speed[-48 ~ 48] "
+Blockly.Msg.GG_MINICAR_MOVE=[["FORWARD","Forward"],["BACKWARD","Backward"],["STOP","Stop"],["TURN LEFT","TurnLeft"],["TURN RIGHT","TurnRight"]]
+Blockly.Msg.GG_MINICAR_MOVE_SHOW="Move Car"
+Blockly.Msg.GG_MINICAR_OUT_PIN="OUT PIN"
 Blockly.Msg.GG_MINICAR_PIN="Car Motor"
 Blockly.Msg.GG_MINICAR_PIN_L1="PIN L1"
 Blockly.Msg.GG_MINICAR_PIN_L2="PIN L2"
@@ -19,27 +32,26 @@ Blockly.Msg.GG_MINICAR_PIN_LR="Left Reverse"
 Blockly.Msg.GG_MINICAR_PIN_R1="PIN R1"
 Blockly.Msg.GG_MINICAR_PIN_R2="PIN R2"
 Blockly.Msg.GG_MINICAR_PIN_RR="Right Reverse"
-Blockly.Msg.GG_MINICAR_INIT_SHOW="Init"
-Blockly.Msg.GG_MINICAR_US_SHOW="Ultrasonic"
-Blockly.Msg.GG_MINICAR_US=[["Left","Left"],["Front Left","fLeft"],["Front","Front"],["Front Right","fRight"],["Right","Right"]]
-Blockly.Msg.GG_MINICAR_US_TRIGPIN="Trig="
-Blockly.Msg.GG_MINICAR_US_ECHOPIN="Echo="
-Blockly.Msg.GG_MINICAR_IR_SHOW="IR"
-Blockly.Msg.GG_MINICAR_IR_PIN="OUT="
-Blockly.Msg.GG_MINICAR_IR=[["Front Left","fLeft"],["Front Center","fCenter"],["Front Right","fRight"],["Rear Left","rLeft"],["Rear Center","rCenter"],["Rear Right","rRight"],["Left","Left"],["Center","Center"],["Right","Right"]]
+Blockly.Msg.GG_MINICAR_RANGING_POS=[["Left","Left"],["Front Left","fLeft"],["Front","Front"],["Front Right","fRight"],["Right","Right"]]
 Blockly.Msg.GG_MINICAR_SETSPEED_SHOW="Set Mini Car Speed[0-255]"
-Blockly.Msg.GG_MINICAR_LINEADJUST_SHOW="Adjust Left Wheel Speed[-48 ~ 48] +="
-Blockly.Msg.GG_MINICAR_MOVE_SHOW = "Move Car"
-Blockly.Msg.GG_MINICAR_MOVE=[["FORWARD","Forward"],["BACKWARD","Backward"],["STOP","Stop"],["TURN LEFT","TurnLeft"],["TURN RIGHT","TurnRight"]]
-Blockly.Msg.GG_MINICAR_TURN=[["LOW","Low"],["HIGH","High"],["ARC","Arc"]]
-Blockly.Msg.GG_MINICAR_ARCSPEED="Turn Speed(0..Car Speed)="
-Blockly.Msg.GG_MINICAR_US_UNIT_SHOW="Set Ultrasonic measure unit to"
-Blockly.Msg.GG_MINICAR_US_UNIT=[["inch","0"],["centermeter","1"],["millimeter","2"]]
-Blockly.Msg.GG_MINICAR_US_GETDISTANCE="Ultrasonic Get Distance"
-Blockly.Msg.GG_MINICAR_IR_DETECT="Trace Detect White"
+Blockly.Msg.GG_MINICAR_SHARP="Sharp"
+Blockly.Msg.GG_MINICAR_SHARPIR_MODEL=[["GP2Y0A51SK0F","1"],["GP2Y0A41SK0F","2"],["GP2Y0A21YK0F","3"],["GP2Y0A60SZLF","4"],["GP2Y0A02YK0F","5"],["GP2Y0A710K0F","6"]]
+Blockly.Msg.GG_MINICAR_SHARPIR_PIN="OUT PIN"
+Blockly.Msg.GG_MINICAR_SHARP_MODEL_SHOW="Model:"
+Blockly.Msg.GG_MINICAR_STICK_DRIVE="Use JoyStick Drive Mini Car Stick"
 Blockly.Msg.GG_MINICAR_STICK_INIT="Set JoyStick Origin"
 Blockly.Msg.GG_MINICAR_STICK_RADIUS="Radius"
-Blockly.Msg.GG_MINICAR_STICK_DRIVE="Use JoyStick Drive Mini Car Stick"
+Blockly.Msg.GG_MINICAR_TRACE="Trace"
+Blockly.Msg.GG_MINICAR_TRACE_DETECT="Trace Detect White"
+Blockly.Msg.GG_MINICAR_TURN=[["LOW","Low"],["HIGH","High"],["ARC","Arc"]]
+Blockly.Msg.GG_MINICAR_US="Ultrasonic"
+Blockly.Msg.GG_MINICAR_US_ECHOPIN="Echo PIN"
+Blockly.Msg.GG_MINICAR_US_TRIGPIN="Trig PIN"
+Blockly.Msg.GG_MINICAR_US_UNIT=[["inch","0"],["centermeter","1"],["millimeter","2"]]
+Blockly.Msg.GG_MINICAR_US_UNIT_SHOW="Set Ultrasonic measure unit to"
+Blockly.Msg.GG_MINICAR_VL53L0X="Laser-VL53L0X"
+Blockly.Msg.GG_MINICAR_VL53L0X_ADDR=[["Defalut","-1"],["0x30","48"],["0x31","49"],["0x32","50"]]
+Blockly.Msg.GG_MINICAR_VL53L0X_XSHUT="xshut PIN"
 // PS2 Controller
 Blockly.Msg.GG_PS2_INIT_SHOW="Init PS2 Controller"
 Blockly.Msg.GG_PS2_INIT_DATPIN="DAT Pin="

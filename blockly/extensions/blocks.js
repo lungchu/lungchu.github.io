@@ -31,9 +31,9 @@ Blockly.Blocks['ggMiniCarInit'] = {
 Blockly.Blocks['ggMiniCarInitUS'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GG_MINICAR_INIT_SHOW)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_US), "SensorPos")
-        .appendField(Blockly.Msg.GG_MINICAR_US_SHOW);
+        .appendField(Blockly.Msg.GG_MINICAR_INIT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_RANGING_POS), "SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_US);
     this.appendValueInput("USTrigPin")
         .setCheck("Number")
         .appendField(Blockly.Msg.GG_MINICAR_US_TRIGPIN);
@@ -50,12 +50,13 @@ Blockly.Blocks['ggMiniCarInitUS'] = {
 Blockly.Blocks['ggMiniCarInitIR'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GG_MINICAR_INIT_SHOW)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_IR), "SensorPos")
-        .appendField(Blockly.Msg.GG_MINICAR_IR_SHOW);
-    this.appendValueInput("IrPin")
+        .appendField(Blockly.Msg.GG_MINICAR_INIT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_IR_POS), "SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_IR)
+        .appendField(Blockly.Msg.GG_MINICAR_TRACE);
+    this.appendValueInput("PIN")
         .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_IR_PIN);
+        .appendField(Blockly.Msg.GG_MINICAR_OUT_PIN);
     this.setInputsInline(true);
     this.setPreviousStatement(!0,null);
     this.setNextStatement(!0,null);
@@ -66,26 +67,38 @@ Blockly.Blocks['ggMiniCarInitIR'] = {
 Blockly.Blocks['ggMiniCarInitVL53L0X'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GG_MINICAR_INIT_SHOW)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_US), "SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_INIT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_RANGING_POS), "SensorPos")
         .appendField(Blockly.Msg.GG_MINICAR_VL53L0X)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_VL53L0X_ADDR), "I2CAddr");
-    this.appendValueInput("xShut")
+        .appendField(Blockly.Msg.GG_MINICAR_I2C_ADDR)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_VL53L0X_ADDR, this.validate), "I2CAddr");
+    this.appendValueInput("PIN")
         .setCheck("Number")
         .appendField(Blockly.Msg.GG_MINICAR_VL53L0X_XSHUT);
+    this.getInput("PIN").setVisible(false);
     this.setInputsInline(true);
     this.setPreviousStatement(!0,null);
     this.setNextStatement(!0,null);
     this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
+  },
+  validate: function(newValue) {
+    const block = this.sourceBlock_;
+    if (newValue==-1) {
+      block.getInput("PIN").setVisible(false);
+    } else {
+      block.getInput("PIN").setVisible(true);
+    }  
   }
 };
 
 Blockly.Blocks['ggMiniCarInitSharpIR'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GG_MINICAR_INIT_SHOW)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_US), "SensorPos")
-        .appendField(Blockly.Msg.GG_MINICAR_SHARPIR_SHOW)
+        .appendField(Blockly.Msg.GG_MINICAR_INIT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_RANGING_POS), "SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_SHARP)
+        .appendField(Blockly.Msg.GG_MINICAR_IR)
+        .appendField(Blockly.Msg.GG_MINICAR_SHARP_MODEL_SHOW)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_SHARPIR_MODEL), "SharpModel")
     this.appendValueInput("PIN")
         .setCheck("Number")
@@ -100,12 +113,13 @@ Blockly.Blocks['ggMiniCarInitSharpIR'] = {
 Blockly.Blocks['ggMiniCarInitAvoidIR'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GG_MINICAR_INIT_SHOW)
-        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_US), "SensorPos")
-        .appendField(Blockly.Msg.GG_MINICAR_AVOIDIR_SHOW);
+        .appendField(Blockly.Msg.GG_MINICAR_INIT)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_RANGING_POS), "SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_IR)
+        .appendField(Blockly.Msg.GG_MINICAR_AVOID);
     this.appendValueInput("PIN")
         .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_IR_PIN);
+        .appendField(Blockly.Msg.GG_MINICAR_OUT_PIN);
     this.setInputsInline(true);
     this.setPreviousStatement(!0,null);
     this.setNextStatement(!0,null);
@@ -193,7 +207,7 @@ function ggMiniCarGetSensorPos(a){
     function(d){
       !d.isInFlyout&&a(d.type)&&(console.log("type="+d.type),
       n=d.getField("SensorPos").getText(),
-      d=d.getFieldValue("SensorPos")||"",//d=d.slice(1,-1),
+      d=d.getFieldValue("SensorPos")||"",
       d=d.trim(),
       console.log("blockName="+d),
       b.push([n,d]))}
@@ -202,7 +216,7 @@ function ggMiniCarGetSensorPos(a){
   return b
 }
 
-function ggMiniCarUSGetBlocks(){
+function ggMiniCar_US_GetBlocks(){
   return ggMiniCarGetSensorPos(
     function(a){
       return a.includes("ggMiniCarInitUS")
@@ -210,17 +224,18 @@ function ggMiniCarUSGetBlocks(){
   )
 };
 
-Blockly.Blocks['ggMiniCarUSGetDistance'] = {
+Blockly.Blocks['ggMiniCar_US_GetDistance'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown(ggMiniCarUSGetBlocks), "SensorPos")
-        .appendField(Blockly.Msg.GG_MINICAR_US_GETDISTANCE);
+        .appendField(new Blockly.FieldDropdown(ggMiniCar_US_GetBlocks), "SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_US)
+        .appendField(Blockly.Msg.GG_MINICAR_GETDISTANCE);
     this.setOutput(true, "Number");
     this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
   }
 };
 
-function ggMiniCarIrGetBlocks(){
+function ggMiniCar_IR_GetBlocks(){
   return ggMiniCarGetSensorPos(
     function(a){
       return a.includes("ggMiniCarInitIR")
@@ -228,11 +243,70 @@ function ggMiniCarIrGetBlocks(){
   )
 };
 
-Blockly.Blocks['ggMiniCarIrDetectWhite']={
+Blockly.Blocks['ggMiniCar_TraceIR_DetectWhite']={
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown(ggMiniCarIrGetBlocks),"SensorPos")
-        .appendField(Blockly.Msg.GG_MINICAR_IR_DETECT);
+        .appendField(new Blockly.FieldDropdown(ggMiniCar_IR_GetBlocks),"SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_IR)
+        .appendField(Blockly.Msg.GG_MINICAR_TRACE_DETECT);
+    this.setOutput(true, "Boolean");
+    this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
+  }
+};
+
+function ggMiniCar_VL53L0X_GetBlocks(){
+  return ggMiniCarGetSensorPos(
+    function(a){
+      return a.includes("ggMiniCarInitVL53L0X")
+    }
+  )
+};
+
+Blockly.Blocks['ggMiniCar_VL53L0X_GetDistance'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown(ggMiniCar_VL53L0X_GetBlocks), "SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_VL53L0X)
+        .appendField(Blockly.Msg.GG_MINICAR_GETDISTANCE);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
+  }
+};
+
+function ggMiniCar_SharpIR_GetBlocks(){
+  return ggMiniCarGetSensorPos(
+    function(a){
+      return a.includes("ggMiniCarInitSharpIR")
+    }
+  )
+};
+
+Blockly.Blocks['ggMiniCar_SharpIR_GetDistance'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown(ggMiniCar_SharpIR_GetBlocks), "SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_SHARP)
+        .appendField(Blockly.Msg.GG_MINICAR_IR)
+        .appendField(Blockly.Msg.GG_MINICAR_GETDISTANCE);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
+  }
+};
+
+function ggMiniCar_AvoidIR_GetBlocks(){
+  return ggMiniCarGetSensorPos(
+    function(a){
+      return a.includes("ggMiniCarInitAvoidIR")
+    }
+  )
+};
+
+Blockly.Blocks['ggMiniCar_AvoidIR_DetectBlack']={
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown(ggMiniCar_AvoidIR_GetBlocks),"SensorPos")
+        .appendField(Blockly.Msg.GG_MINICAR_IR)
+        .appendField(Blockly.Msg.GG_MINICAR_AVOID_DETECT);
     this.setOutput(true, "Boolean");
     this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
   }

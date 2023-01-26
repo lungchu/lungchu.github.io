@@ -3,53 +3,53 @@
   <category name="ggMiniCar">
     <block type="ggMiniCarInit">
 			<value name="L1">
-				<block type="math_number">
+				<shadow type="math_number">
 					<field name="NUM">25</field>
-				</block>
+				</shadow>
 			</value>
 			<value name="L2">
-			<block type="math_number">
-				<field name="NUM">26</field>
-			</block>
+			  <shadow type="math_number">
+				  <field name="NUM">26</field>
+			  </shadow>
 			</value>
-       <field name="LeftReverse">FALSE</field>
+      <field name="LeftReverse">FALSE</field>
 			<value name="R1">
-				<block type="math_number">
+				<shadow type="math_number">
 					<field name="NUM">32</field>
-				</block>
+				</shadow>
 			</value>
 			<value name="R2">
-				<block type="math_number">
+				<shadow type="math_number">
 					<field name="NUM">33</field>
-				</block>
+				</shadow>
 			</value>
        <field name="RightReverse">FALSE</field>
     </block>
     <block type="ggMiniCarInitUS">
       <field name="SensorPos">Left</field>
 			<value name="USTrigPin">
-				<block type="math_number">
+				<shadow type="math_number">
 					<field name="NUM">12</field>
-				</block>
+				</shadow>
 			</value>
 			<value name="USEchoPin">
-				<block type="math_number">
+				<shadow type="math_number">
 					<field name="NUM">13</field>
-				</block>
+				</shadow>
 			</value>
     </block>
     <block type="ggMiniCarInitIR">
       <field name="SensorPos">fLeft</field>
-			<value name="IrPin">
-				<block type="math_number">
+			<value name="PIN">
+				<shadow type="math_number">
 					<field name="NUM">35</field>
-				</block>
+				</shadow>
 			</value>
     </block>
     <block type="ggMiniCarInitVL53L0X">
       <field name="SensorPos">Left</field>
-			<field name="I2CAddr">48</field>
-			<value name="xShut">
+			<field name="I2CAddr">-1</field>
+			<value name="PIN">
 				<shadow type="math_number">
 					<field name="NUM">21</field>
 				</shadow>
@@ -58,6 +58,14 @@
     <block type="ggMiniCarInitSharpIR">
       <field name="SensorPos">Left</field>
 			<field name="SharpModel">1</field>
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">21</field>
+				</shadow>
+			</value>
+    </block>
+    <block type="ggMiniCarInitAvoidIR">
+      <field name="SensorPos">Left</field>
 			<value name="PIN">
 				<shadow type="math_number">
 					<field name="NUM">21</field>
@@ -90,11 +98,20 @@
     <block type="ggMiniCarUSSetUnit">
       <field name="USUnit">1</field>
     </block>
-    <block type="ggMiniCarUSGetDistance">
+    <block type="ggMiniCar_US_GetDistance">
+      <field name="SensorPos">Left</field>
+    </block>
+    <block type="ggMiniCar_TraceIR_DetectWhite">
       <field name="SensorPos">fLeft</field>
     </block>
-    <block type="ggMiniCarIrDetectWhite">
-      <field name="SensorPos">fLeft</field>
+    <block type="ggMiniCar_VL53L0X_GetDistance">
+      <field name="SensorPos">Left</field>
+    </block>
+    <block type="ggMiniCar_SharpIR_GetDistance">
+      <field name="SensorPos">Left</field>
+    </block>
+    <block type="ggMiniCar_AvoidIR_DetectBlack">
+      <field name="SensorPos">Left</field>
     </block>
     <block type="ggMiniCarStickOrigin">
     	<value name="X">
