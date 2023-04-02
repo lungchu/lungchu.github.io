@@ -12,6 +12,25 @@ Blockly.Arduino['ggMiniCarInit']=function(block) {
   return code;
 };
 
+Blockly.Arduino['ggMiniCarInit4WD']=function(block) {
+  var LF1 = Blockly.Arduino.valueToCode(block, 'LF1', Blockly.Arduino.ORDER_ATOMIC);
+  var LF2 = Blockly.Arduino.valueToCode(block, 'LF2', Blockly.Arduino.ORDER_ATOMIC);
+  var LeftFrontReverse = block.getFieldValue('LeftFrontReverse') === 'TRUE';
+  var RF1 = Blockly.Arduino.valueToCode(block, 'RF1', Blockly.Arduino.ORDER_ATOMIC);
+  var RF2 = Blockly.Arduino.valueToCode(block, 'RF2', Blockly.Arduino.ORDER_ATOMIC);
+  var RightFrontReverse = block.getFieldValue('RightFrontReverse') === 'TRUE';
+  var LR1 = Blockly.Arduino.valueToCode(block, 'LR1', Blockly.Arduino.ORDER_ATOMIC);
+  var LR2 = Blockly.Arduino.valueToCode(block, 'LR2', Blockly.Arduino.ORDER_ATOMIC);
+  var LeftRearReverse = block.getFieldValue('LeftRearReverse') === 'TRUE';
+  var RR1 = Blockly.Arduino.valueToCode(block, 'RR1', Blockly.Arduino.ORDER_ATOMIC);
+  var RR2 = Blockly.Arduino.valueToCode(block, 'RR2', Blockly.Arduino.ORDER_ATOMIC);
+  var RightRearReverse = block.getFieldValue('RightRearReverse') === 'TRUE';
+  Blockly.Arduino.definitions_['ggMiniCarInitInclude'] = '#include <GG_MiniCar.h>';
+  Blockly.Arduino.definitions_['ggMiniCarInit'] = 'DC_Car ggCar('+ LF1 +','+ LF2 +','+ LeftFrontReverse +','+ RF1 +','+ RF2 +','+ RightFrontReverse +','+ LR1 +','+ LR2 +','+ LeftRearReverse +','+ RR1 +','+ RR2 +','+ RightRearReverse +',true);';
+  var code = '';
+  return code;
+};
+
 Blockly.Arduino['ggMiniCarInitUS']=function(block) {
   var SensorPos = block.getFieldValue('SensorPos');
   var USTrigPin = Blockly.Arduino.valueToCode(block, 'USTrigPin', Blockly.Arduino.ORDER_ATOMIC);

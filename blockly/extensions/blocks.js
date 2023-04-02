@@ -28,6 +28,53 @@ Blockly.Blocks['ggMiniCarInit'] = {
   }
 };
 
+Blockly.Blocks['ggMiniCarInit4WD'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_MINICAR4WD_PIN);
+    this.appendValueInput("LF1")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_LF1);
+    this.appendValueInput("LF2")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_LF2);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_LFR)
+        .appendField(new Blockly.FieldCheckbox("FALSE"), 'LeftFrontReverse');
+    this.appendValueInput("RF1")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_RF1);
+    this.appendValueInput("RF2")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_RF2);
+    this.appendDummyInput()            
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_RFR)
+        .appendField(new Blockly.FieldCheckbox("FALSE"), 'RightFrontReverse');
+        this.appendValueInput("LR1")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_LR1);
+    this.appendValueInput("LR2")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_LR2);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_LRR)
+        .appendField(new Blockly.FieldCheckbox("FALSE"), 'LeftRearReverse');
+    this.appendValueInput("RR1")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_RR1);
+    this.appendValueInput("RR2")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_RR2);
+    this.appendDummyInput()            
+        .appendField(Blockly.Msg.GG_MINICAR_PIN_RRR)
+        .appendField(new Blockly.FieldCheckbox("FALSE"), 'RightRearReverse');
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
+  }
+};
+
 Blockly.Blocks['ggMiniCarInitUS'] = {
   init: function() {
     this.appendDummyInput()
