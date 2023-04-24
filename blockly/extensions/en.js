@@ -5,6 +5,7 @@ Blockly.Msg["HUE_GG_PS3"] = 160;
 Blockly.Msg["HUE_GG_PS3_EVENT"] = 210;
 Blockly.Msg["HUE_GG_DABBLE"] = 260;
 Blockly.Msg["HUE_GG_LINKITREMOTE"] = 310;
+Blockly.Msg["HUE_GG_BP32"] = 30;
 
 Blockly.Msg.GG_BUTTON="Button"
 Blockly.Msg.GG_ISPRESSED="is pressed"
@@ -26,25 +27,16 @@ Blockly.Msg.GG_MINICAR_MOVE=[["FORWARD","Forward"],["BACKWARD","Backward"],["STO
 Blockly.Msg.GG_MINICAR_MOVE_SHOW="Move Car"
 Blockly.Msg.GG_MINICAR_OUT_PIN="OUT PIN"
 Blockly.Msg.GG_MINICAR_PIN="Car Motor"
-Blockly.Msg.GG_MINICAR_PIN_L1="PIN L1"
-Blockly.Msg.GG_MINICAR_PIN_L2="PIN L2"
-Blockly.Msg.GG_MINICAR_PIN_LR="Left Reverse"
-Blockly.Msg.GG_MINICAR_PIN_R1="PIN R1"
-Blockly.Msg.GG_MINICAR_PIN_R2="PIN R2"
-Blockly.Msg.GG_MINICAR_PIN_RR="Right Reverse"
+Blockly.Msg.GG_MINICAR_WHEEL_LEFT="　Left Motor"
+Blockly.Msg.GG_MINICAR_WHEEL_RIGHT="　Right Motor"
 Blockly.Msg.GG_MINICAR4WD_PIN="4WD Car Motor"
-Blockly.Msg.GG_MINICAR_PIN_LF1="PIN LF1"
-Blockly.Msg.GG_MINICAR_PIN_LF2="PIN LF2"
-Blockly.Msg.GG_MINICAR_PIN_LFR="Left Front Reverse"
-Blockly.Msg.GG_MINICAR_PIN_RF1="PIN RF1"
-Blockly.Msg.GG_MINICAR_PIN_RF2="PIN RF2"
-Blockly.Msg.GG_MINICAR_PIN_RFR="Right Front Reverse"
-Blockly.Msg.GG_MINICAR_PIN_LR1="PIN LR1"
-Blockly.Msg.GG_MINICAR_PIN_LR2="PIN LR2"
-Blockly.Msg.GG_MINICAR_PIN_LRR="Left Rear Reverse"
-Blockly.Msg.GG_MINICAR_PIN_RR1="PIN RR1"
-Blockly.Msg.GG_MINICAR_PIN_RR2="PIN RR2"
-Blockly.Msg.GG_MINICAR_PIN_RRR="Right Rear Reverse"
+Blockly.Msg.GG_MINICAR_PIN1="PIN1"
+Blockly.Msg.GG_MINICAR_PIN2="PIN2"
+Blockly.Msg.GG_MINICAR_WHEEL_REVERSE="Reverse"
+Blockly.Msg.GG_MINICAR_WHEEL_LF="Left Front Motor"
+Blockly.Msg.GG_MINICAR_WHEEL_RF="　Right Front Motor"
+Blockly.Msg.GG_MINICAR_WHEEL_LR="Left Rear Motor"
+Blockly.Msg.GG_MINICAR_WHEEL_RR="　Right Rear Motor"
 Blockly.Msg.GG_MINICAR_RANGING_POS=[["Left","Left"],["Front Left","fLeft"],["Front","Front"],["Front Right","fRight"],["Right","Right"]]
 Blockly.Msg.GG_MINICAR_SETSPEED_SHOW="Set Mini Car Speed[0-254]"
 Blockly.Msg.GG_MINICAR_SHARP="Sharp"
@@ -106,6 +98,25 @@ Blockly.Msg.GG_PS3_CALLBACK_DISCONNECT_FUNCTION_SHOW="PS3 DisConnect Do"
 Blockly.Msg.GG_PS3_FUNCTION_NAME_SHOW="Name"
 Blockly.Msg.GG_PS3_GG_MACADDR=[["GG_PS3-01","52:E5:1E:87:3E:C4"],["GG_PS3-02","84:A7:94:02:F0:5D"],["GG_PS3-03","CE:04:D3:D4:68:51"],["GG_PS3-04","7E:37:67:D6:23:B1"],["GG_PS3-05","42:62:89:B1:17:21"],["GG_PS3-06","A6:20:26:AC:5B:85"],["GG_PS3-07","6E:7F:CD:45:2C:35"],["GG_PS3-08","7C:1F:76:2D:47:55"],["GG_PS3-09","78:2D:F7:70:26:4B"],["GG_PS3-10","4A:45:D2:8F:BF:DE"],["GG_PS3-11","B4:85:91:A1:C2:84"],["GG_PS3-12","AA:F1:6A:A7:83:E0"]]
 Blockly.Msg.GG_PS3_YP_MACADDR=[["YP_PS3-01","42:CD:66:CF:4A:84"],["YP_PS3-02","D2:D7:AE:26:ED:B7"],["YP_PS3-03","A2:3D:4D:CA:25:02"],["YP_PS3-04","52:CA:C5:EA:69:54"],["YP_PS3-05","5E:81:12:C0:FC:28"],["YP_PS3-06","7A:42:40:CE:59:3F"],["YP_PS3-07","B6:C2:9B:92:C4:DE"],["YP_PS3-08","D6:A1:91:C8:87:16"],["YP_PS3-09","D6:8D:37:B8:12:77"],["YP_PS3-10","0E:E1:E1:20:B1:5B"],["YP_PS3-11","EA:27:A5:46:B4:8E"],["YP_PS3-12","AE:8A:14:DF:10:0F"],["YP_PS3-13","E2:DD:26:32:31:E2"],["YP_PS3-14","9A:FF:B6:6F:FE:71"],["YP_PS3-15","42:EE:D7:48:42:60"],["YP_PS3-16","62:E3:9A:2A:FD:ED"],["YP_PS3-17","C6:0F:DC:67:75:28"],["YP_PS3-18","E6:65:AC:08:CB:3C"],["YP_PS3-19","2E:56:D0:6A:E1:63"],["YP_PS3-20","E6:6F:67:4B:35:71"]]
+// PS4 Controller採用Bluepad32
+Blockly.Msg.GG_BP32_INIT_SHOW="Init GamePad(Bluepad32)"
+Blockly.Msg.GG_BP32_UPDATE_SHOW="Read GamePad(Bluepad32)"
+Blockly.Msg.GG_BP32_IS_CONNECTED_SHOW="Is Connected(Bluepad32)"
+Blockly.Msg.GG_BP32_PS4="PS4"
+Blockly.Msg.GG_BP32_BUTTON_STATUS_SHOW="is Pressed"
+Blockly.Msg.GG_BP32_BUTTON_VALUE_SHOW="Value"
+Blockly.Msg.GG_BP32_PS4_BUTTON_STATUS=[["UP","up"],["DOWN","down"],["LEFT","left"],["RIGHT","right"],["TRIANGLE","triangle"],["CROSS","cross"],["SQUARE","square"],["CIRCLE","circle"],["L1","l1"],["L2","l2"],["L3","l3"],["R1","r1"],["R2","r2"],["R3","r3"],["SHARE","select"],["OPTIONS","start"],["PS","ps"]]
+Blockly.Msg.GG_BP32_PS4_BUTTON_VALUE=[["Left Stick X","stick.lx"],["Left Stick Y","stick.ly"],["Right Stick X","stick.rx"],["Right Stick Y","stick.ry"],["throttle","throttle()"],["brake","brake()"],["UP","button.up"],["DOWN","button.down"],["LEFT","button.left"],["RIGHT","button.right"],["TRIANGLE","button.triangle"],["CROSS","button.cross"],["SQUARE","button.square"],["CIRCLE","button.circle"],["L1","button.l1"],["L2","button.l2"],["R1","button.r1"],["R2","button.r2"]]
+Blockly.Msg.GG_BP32_Battery="Battery"
+Blockly.Msg.GG_BP32_SetPlayerLEDs="Set Player LEDs"
+Blockly.Msg.GG_BP32_LED="No="
+Blockly.Msg.GG_BP32_SetColorLED="Set Color LED"
+Blockly.Msg.GG_BP32_RED="Red="
+Blockly.Msg.GG_BP32_GREEN="Green="
+Blockly.Msg.GG_BP32_BLUE="Blue="
+Blockly.Msg.GG_BP32_SetRumble="Set Rumble"
+Blockly.Msg.GG_BP32_FORCE="Force="
+Blockly.Msg.GG_BP32_DURATION="Duration="
 // Dabble
 Blockly.Msg.GG_DABBLE_BEGIN="Dabble Begin BLE="
 Blockly.Msg.GG_DABBLE_BLEMODE=[["SERIAL","Serial"],["ESP32","ESP32"]]

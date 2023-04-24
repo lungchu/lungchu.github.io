@@ -5,6 +5,7 @@ Blockly.Msg["HUE_GG_PS3"] = 160;
 Blockly.Msg["HUE_GG_PS3_EVENT"] = 210;
 Blockly.Msg["HUE_GG_DABBLE"] = 260;
 Blockly.Msg["HUE_GG_LINKITREMOTE"] = 310;
+Blockly.Msg["HUE_GG_PS4"] = 20;
 
 Blockly.Msg.GG_BUTTON="鈕"
 Blockly.Msg.GG_ISPRESSED="是按下的"
@@ -26,25 +27,16 @@ Blockly.Msg.GG_MINICAR_MOVE=[["前進","Forward"],["後退","Backward"],["停止
 Blockly.Msg.GG_MINICAR_MOVE_SHOW="移動光光小車"
 Blockly.Msg.GG_MINICAR_OUT_PIN="OUT接腳位"
 Blockly.Msg.GG_MINICAR_PIN="光光小車馬達腳位"
-Blockly.Msg.GG_MINICAR_PIN_L1="左輪1"
-Blockly.Msg.GG_MINICAR_PIN_L2="左輪2"
-Blockly.Msg.GG_MINICAR_PIN_LR="左輪反向"
-Blockly.Msg.GG_MINICAR_PIN_R1="右輪1"
-Blockly.Msg.GG_MINICAR_PIN_R2="右輪2"
-Blockly.Msg.GG_MINICAR_PIN_RR="右輪反向"
+Blockly.Msg.GG_MINICAR_WHEEL_LEFT="左輪"
+Blockly.Msg.GG_MINICAR_WHEEL_RIGHT="　右輪"
 Blockly.Msg.GG_MINICAR4WD_PIN="光光四驅小車馬達腳位"
-Blockly.Msg.GG_MINICAR_PIN_LF1="左前輪1"
-Blockly.Msg.GG_MINICAR_PIN_LF2="左前輪2"
-Blockly.Msg.GG_MINICAR_PIN_LFR="左前輪反向"
-Blockly.Msg.GG_MINICAR_PIN_RF1="右前輪1"
-Blockly.Msg.GG_MINICAR_PIN_RF2="右前輪2"
-Blockly.Msg.GG_MINICAR_PIN_RFR="右前輪反向"
-Blockly.Msg.GG_MINICAR_PIN_LR1="左後輪1"
-Blockly.Msg.GG_MINICAR_PIN_LR2="左後輪2"
-Blockly.Msg.GG_MINICAR_PIN_LRR="左後輪反向"
-Blockly.Msg.GG_MINICAR_PIN_RR1="右後輪1"
-Blockly.Msg.GG_MINICAR_PIN_RR2="右後輪2"
-Blockly.Msg.GG_MINICAR_PIN_RRR="右後輪反向"
+Blockly.Msg.GG_MINICAR_PIN1="腳位1"
+Blockly.Msg.GG_MINICAR_PIN2="腳位2"
+Blockly.Msg.GG_MINICAR_WHEEL_REVERSE="反向"
+Blockly.Msg.GG_MINICAR_WHEEL_LF="左前輪"
+Blockly.Msg.GG_MINICAR_WHEEL_RF="　右前輪"
+Blockly.Msg.GG_MINICAR_WHEEL_LR="左後輪"
+Blockly.Msg.GG_MINICAR_WHEEL_RR="　右後輪"
 Blockly.Msg.GG_MINICAR_RANGING_POS=[["左","Left"],["左前","fLeft"],["前","Front"],["右前","fRight"],["右","Right"]]
 Blockly.Msg.GG_MINICAR_SETSPEED_SHOW="將光光小車速度設為[0-254]"
 Blockly.Msg.GG_MINICAR_SHARP="夏普"
@@ -98,6 +90,26 @@ Blockly.Msg.GG_PS3_CALLBACK_DISCONNECT_FUNCTION_SHOW="PS3手柄離線 執行"
 Blockly.Msg.GG_PS3_FUNCTION_NAME_SHOW="名稱"
 Blockly.Msg.GG_PS3_GG_MACADDR=[["光光-01","52:E5:1E:87:3E:C4"],["光光-02","84:A7:94:02:F0:5D"],["光光-03","CE:04:D3:D4:68:51"],["光光-04","7E:37:67:D6:23:B1"],["光光-05","42:62:89:B1:17:21"],["光光-06","A6:20:26:AC:5B:85"],["光光-07","6E:7F:CD:45:2C:35"],["光光-08","7C:1F:76:2D:47:55"],["光光-09","78:2D:F7:70:26:4B"],["光光-10","4A:45:D2:8F:BF:DE"],["光光-11","B4:85:91:A1:C2:84"],["光光-12","AA:F1:6A:A7:83:E0"]]
 Blockly.Msg.GG_PS3_YP_MACADDR=[["營盤-01","42:CD:66:CF:4A:84"],["營盤-02","D2:D7:AE:26:ED:B7"],["營盤-03","A2:3D:4D:CA:25:02"],["營盤-04","52:CA:C5:EA:69:54"],["營盤-05","5E:81:12:C0:FC:28"],["營盤-06","7A:42:40:CE:59:3F"],["營盤-07","B6:C2:9B:92:C4:DE"],["營盤-08","D6:A1:91:C8:87:16"],["營盤-09","D6:8D:37:B8:12:77"],["營盤-10","0E:E1:E1:20:B1:5B"],["營盤-11","EA:27:A5:46:B4:8E"],["營盤-12","AE:8A:14:DF:10:0F"],["營盤-13","E2:DD:26:32:31:E2"],["營盤-14","9A:FF:B6:6F:FE:71"],["營盤-15","42:EE:D7:48:42:60"],["營盤-16","62:E3:9A:2A:FD:ED"],["營盤-17","C6:0F:DC:67:75:28"],["營盤-18","E6:65:AC:08:CB:3C"],["營盤-19","2E:56:D0:6A:E1:63"],["營盤-20","E6:6F:67:4B:35:71"]]
+// PS4 Controller採用Bluepad32
+Blockly.Msg.GG_BP32_INIT_SHOW="啟用手柄(Bluepad32)"
+Blockly.Msg.GG_BP32_UPDATE_SHOW="與手柄同步(Bluepad32)"
+Blockly.Msg.GG_BP32_IS_CONNECTED_SHOW="手柄己連線(Bluepad32)"
+Blockly.Msg.GG_BP32_PS4="PS4"
+Blockly.Msg.GG_BP32_BUTTON_STATUS_SHOW="是按下的"
+Blockly.Msg.GG_BP32_BUTTON_VALUE_SHOW="值"
+Blockly.Msg.GG_BP32_PS4_BUTTON_STAUS=[["上","0"],["下","1"],["左","3"],["右","2"],["三角","y()"],["叉","a()"],["方","x()"],["圓","b()"],["左1","l1()"],["左2","l2()"],["左3","thumbL()"],["右1","r1()"],["右2","r2()"],["右3","thumbR()"],["SHARE","miscBack()"],["OPTIONS","miscHome()"],["PS","miscSystem()"]]
+Blockly.Msg.GG_BP32_PS4_BUTTON_VALUE=[["左搖桿X","axisX()"],["左搖桿Y","axisY()"],["右搖桿X","axisRX()"],["右搖桿Y","axisRY()"],["油門","throttle()"],["剎車","brake()"],["上","0"],["下","1"],["左","3"],["右","2"],["三角","y()"],["叉","a()"],["方","x()"],["圓","b()"],["左1","l1()"],["左2","l2()"],["左3","thumbL()"],["右1","r1()"],["右2","r2()"],["右3","thumbR()"],["SHARE","miscBack()"],["OPTIONS","miscHome()"],["PS","miscSystem()"]]
+Blockly.Msg.GG_BP32_Battery="電量"
+Blockly.Msg.GG_BP32_SetPlayerLEDs="設定玩家LED"
+Blockly.Msg.GG_BP32_LED="編號="
+Blockly.Msg.GG_BP32_SetColorLED="設定彩色LED"
+Blockly.Msg.GG_BP32_RED="紅="
+Blockly.Msg.GG_BP32_GREEN="綠="
+Blockly.Msg.GG_BP32_BLUE="藍="
+Blockly.Msg.GG_BP32_SetRumble="震動"
+Blockly.Msg.GG_BP32_FORCE="強度="
+Blockly.Msg.GG_BP32_DURATION="持續="
+
 // Dabble
 Blockly.Msg.GG_DABBLE_BEGIN="啟用Dabble 藍芽="
 Blockly.Msg.GG_DABBLE_BLEMODE=[["序列","Serial"],["ESP32","ESP32"]]

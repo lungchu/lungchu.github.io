@@ -13,17 +13,17 @@ Blockly.Arduino['ggMiniCarInit']=function(block) {
 };
 
 Blockly.Arduino['ggMiniCarInit4WD']=function(block) {
-  var LF1 = Blockly.Arduino.valueToCode(block, 'LF1', Blockly.Arduino.ORDER_ATOMIC);
-  var LF2 = Blockly.Arduino.valueToCode(block, 'LF2', Blockly.Arduino.ORDER_ATOMIC);
+  var LF1 = block.getFieldValue('LF1');
+  var LF2 = block.getFieldValue('LF2');
   var LeftFrontReverse = block.getFieldValue('LeftFrontReverse') === 'TRUE';
-  var RF1 = Blockly.Arduino.valueToCode(block, 'RF1', Blockly.Arduino.ORDER_ATOMIC);
-  var RF2 = Blockly.Arduino.valueToCode(block, 'RF2', Blockly.Arduino.ORDER_ATOMIC);
+  var RF1 = block.getFieldValue('RF1');
+  var RF2 = block.getFieldValue('RF2');
   var RightFrontReverse = block.getFieldValue('RightFrontReverse') === 'TRUE';
-  var LR1 = Blockly.Arduino.valueToCode(block, 'LR1', Blockly.Arduino.ORDER_ATOMIC);
-  var LR2 = Blockly.Arduino.valueToCode(block, 'LR2', Blockly.Arduino.ORDER_ATOMIC);
+  var LR1 = block.getFieldValue('LR1');
+  var LR2 = block.getFieldValue('LR2');
   var LeftRearReverse = block.getFieldValue('LeftRearReverse') === 'TRUE';
-  var RR1 = Blockly.Arduino.valueToCode(block, 'RR1', Blockly.Arduino.ORDER_ATOMIC);
-  var RR2 = Blockly.Arduino.valueToCode(block, 'RR2', Blockly.Arduino.ORDER_ATOMIC);
+  var RR1 = block.getFieldValue('RR1');
+  var RR2 = block.getFieldValue('RR2');
   var RightRearReverse = block.getFieldValue('RightRearReverse') === 'TRUE';
   Blockly.Arduino.definitions_['ggMiniCarInitInclude'] = '#include <GG_MiniCar.h>';
   Blockly.Arduino.definitions_['ggMiniCarInit'] = 'DC_Car ggCar('+ LF1 +','+ LF2 +','+ LeftFrontReverse +','+ RF1 +','+ RF2 +','+ RightFrontReverse +','+ LR1 +','+ LR2 +','+ LeftRearReverse +','+ RR1 +','+ RR2 +','+ RightRearReverse +',true);';
@@ -343,6 +343,72 @@ Blockly.Arduino['ggPS3_YPPS3_MAC']=function(block) {
   Mac='"'+Mac+'"';
   return Mac;
 };
+// PS4 Controller採用Bluepad32
+Blockly.Arduino['ggBP32Init']=function(block) {
+//  Blockly.Arduino.definitions_['ggBP32Init'] = '#include <Bluepad32.h>\n\nGamepadPtr ggGamepadBP32;\n\nvoid onConnectedBluepad32(GamepadPtr gp) {\n  if (ggGamepadBP32 == nullptr) {\n    Serial.println("CALLBACK: Gamepad is connected");\n    GamepadProperties properties = gp->getProperties();\n    Serial.printf("Gamepad model: %s, VID=0x%04x, PID=0x%04x\\n", gp->getModelName().c_str(), properties.vendor_id,properties.product_id);\n    ggGamepadBP32 = gp;\n  } else {\n    Serial.println("CALLBACK: Another Gamepad connected, but another one is used");\n  }\n}\n\nvoid onDisconnectedBluepad32(GamepadPtr gp) {\n  if (ggGamepadBP32 == gp) {\n    Serial.println("CALLBACK: Gamepad is disconnected.");\n    ggGamepadBP32 = nullptr;\n  } else {\n    Serial.println("CALLBACK: Gamepad disconnected, but not useed");\n  }\n}\n';
+  Blockly.Arduino.definitions_['ggBP32Init'] = '#include <Bluepad32.h>\n#include <GG_Bluepad32.h>\n';
+  Blockly.Arduino.setups_['ggBP32Init'] = 'BP32.setup(&onConnectedBluepad32, &onDisconnectedBluepad32);\n  BP32.forgetBluetoothKeys();';
+  return '';
+};
+
+Blockly.Arduino['ggBP32Update']=function(block) {
+  var code = 'BP32.update();\n';
+  return code;
+};
+
+Blockly.Arduino['ggBP32IsConnect']=function(block) {
+  var code = 'ggGamepadBP32 && ggGamepadBP32->isConnected()';
+  return [code, Blockly.Arduino.ORDER_NONE];
+};
+
+Blockly.Arduino['ggBP32_PS4Button_Pressed']=function(block) {
+  var Button = block.getFieldValue('Button');
+  var code;
+  if ((Button>=0) && (Button<=3)) {
+    code = 'ggBP32dpadButton('+Button+')';
+  } else {
+    code = 'ggGamepadBP32->' + Button;
+  }
+  return [code, Blockly.Arduino.ORDER_NONE];
+};
+
+Blockly.Arduino['ggBP32_PS4Button_Value']=function(block) {
+  var Button = block.getFieldValue('Button');
+  var code;
+  if ((Button>=0) && (Button<=3)) {
+    code = 'ggBP32dpadButton('+Button+')';
+  } else {
+    code = 'ggGamepadBP32->' + Button;
+  }
+  return [code, Blockly.Arduino.ORDER_NONE];
+};
+
+Blockly.Arduino['ggBP32_Battery']=function(block) {
+  var code = 'ggGamepadBP32->battery()';
+  return [code, Blockly.Arduino.ORDER_NONE];
+};
+
+Blockly.Arduino['ggBP32SetPlayerLEDs']=function(block) {
+  var LED=Blockly.Arduino.valueToCode(block,'LED', Blockly.Arduino.ORDER_ATOMIC);
+  var code='ggGamepadBP32->setPlayerLEDs('+LED+');\n';
+  return code;
+};
+
+Blockly.Arduino['ggBP32SetColorLED']=function(block) {
+	var RED=Blockly.Arduino.valueToCode(block,"RED",Blockly.Arduino.ORDER_ATOMIC),
+      GREEN=Blockly.Arduino.valueToCode(block,"GREEN",Blockly.Arduino.ORDER_ATOMIC),
+      BLUE=Blockly.Arduino.valueToCode(block,"BLUE",Blockly.Arduino.ORDER_ATOMIC);
+  var code='ggGamepadBP32->setColorLED('+RED+','+GREEN+','+BLUE+');\n';
+  return code;
+};
+
+Blockly.Arduino['ggBP32SetRumble']=function(block) {
+	var FORCE=Blockly.Arduino.valueToCode(block,"FORCE",Blockly.Arduino.ORDER_ATOMIC),
+      DURATION=Blockly.Arduino.valueToCode(block,"DURATION",Blockly.Arduino.ORDER_ATOMIC);
+  var code='ggGamepadBP32->setRumble('+FORCE+','+DURATION+');\n';
+  return code;
+};
+
 // Dabble
 Blockly.Arduino['ggDabble_Begin']=function(block) {
   var BleMode = block.getFieldValue('BleMode');

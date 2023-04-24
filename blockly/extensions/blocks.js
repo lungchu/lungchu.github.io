@@ -5,21 +5,23 @@ Blockly.Blocks['ggMiniCarInit'] = {
         .appendField(Blockly.Msg.GG_MINICAR_PIN);
     this.appendValueInput("L1")
         .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_L1);
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_LEFT)
+        .appendField(Blockly.Msg.GG_MINICAR_PIN1);
     this.appendValueInput("L2")
         .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_L2);
+        .appendField(Blockly.Msg.GG_MINICAR_PIN2);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_LR)
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_REVERSE)
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'LeftReverse');
     this.appendValueInput("R1")
         .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_R1);
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_RIGHT)
+        .appendField(Blockly.Msg.GG_MINICAR_PIN1);
     this.appendValueInput("R2")
         .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_R2);
+        .appendField(Blockly.Msg.GG_MINICAR_PIN2);
     this.appendDummyInput()            
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_RR)
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_REVERSE)
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'RightReverse');
     this.setInputsInline(true);
     this.setPreviousStatement(!0,null);
@@ -31,44 +33,40 @@ Blockly.Blocks['ggMiniCarInit'] = {
 Blockly.Blocks['ggMiniCarInit4WD'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GG_MINICAR4WD_PIN);
-    this.appendValueInput("LF1")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_LF1);
-    this.appendValueInput("LF2")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_LF2);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_LFR)
-        .appendField(new Blockly.FieldCheckbox("FALSE"), 'LeftFrontReverse');
-    this.appendValueInput("RF1")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_RF1);
-    this.appendValueInput("RF2")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_RF2);
-    this.appendDummyInput()            
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_RFR)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GG_MINICAR4WD_PIN)
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_LF)
+        .appendField(Blockly.Msg.GG_MINICAR_PIN1)
+        .appendField(new Blockly.FieldNumber(12), "LF1")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN2)
+        .appendField(new Blockly.FieldNumber(13), "LF2")
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_REVERSE)
+        .appendField(new Blockly.FieldCheckbox("FALSE"), 'LeftFrontReverse')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_RF)
+        .appendField(Blockly.Msg.GG_MINICAR_PIN1)
+        .appendField(new Blockly.FieldNumber(12), "RF1")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN2)
+        .appendField(new Blockly.FieldNumber(13), "RF2")
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_REVERSE)
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'RightFrontReverse');
-        this.appendValueInput("LR1")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_LR1);
-    this.appendValueInput("LR2")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_LR2);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_LRR)
-        .appendField(new Blockly.FieldCheckbox("FALSE"), 'LeftRearReverse');
-    this.appendValueInput("RR1")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_RR1);
-    this.appendValueInput("RR2")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_RR2);
-    this.appendDummyInput()            
-        .appendField(Blockly.Msg.GG_MINICAR_PIN_RRR)
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_LR)
+        .appendField(Blockly.Msg.GG_MINICAR_PIN1)
+        .appendField(new Blockly.FieldNumber(12), "LR1")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN2)
+        .appendField(new Blockly.FieldNumber(13), "LR2")
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_REVERSE)
+        .appendField(new Blockly.FieldCheckbox("FALSE"), 'LeftRearReverse')
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_RR)
+        .appendField(Blockly.Msg.GG_MINICAR_PIN1)
+        .appendField(new Blockly.FieldNumber(12), "RR1")
+        .appendField(Blockly.Msg.GG_MINICAR_PIN2)
+        .appendField(new Blockly.FieldNumber(13), "RR2")
+        .appendField(Blockly.Msg.GG_MINICAR_WHEEL_REVERSE)
         .appendField(new Blockly.FieldCheckbox("FALSE"), 'RightRearReverse');
-    this.setInputsInline(true);
+    this.setInputsInline(false);
     this.setPreviousStatement(!0,null);
     this.setNextStatement(!0,null);
     this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
@@ -777,6 +775,138 @@ Blockly.Blocks['ggPS3_YPPS3_MAC'] = {
     .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_PS3_YP_MACADDR), "MAC");
     this.setOutput(true, "");
     this.setColour(Blockly.Msg["HUE_GG_PS3"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+// PS4 Controller 採用Bluepad32
+Blockly.Blocks['ggBP32Init'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_INIT_SHOW)
+    this.setInputsInline(true);    
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggBP32Update'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_UPDATE_SHOW)
+    this.setInputsInline(true);    
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggBP32IsConnect'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_IS_CONNECTED_SHOW);
+    this.setOutput(true, "Boolean");
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggBP32_PS4Button_Pressed'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_PS4)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_BP32_PS4_BUTTON_STAUS), "Button")
+        .appendField(Blockly.Msg.GG_BP32_BUTTON_STATUS_SHOW);
+    this.setOutput(true, "Boolean");
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggBP32_PS4Button_Value'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_PS4)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_BP32_PS4_BUTTON_VALUE), "Button")
+        .appendField(Blockly.Msg.GG_BP32_BUTTON_VALUE_SHOW);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggBP32_Battery'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_Battery)
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggBP32SetPlayerLEDs'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_SetPlayerLEDs)
+    this.appendValueInput("LED")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_BP32_LED);
+    this.setInputsInline(true);    
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggBP32SetColorLED'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_SetColorLED)
+    this.appendValueInput("RED")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_BP32_RED);
+    this.appendValueInput("GREEN")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_BP32_GREEN);
+    this.appendValueInput("BLUE")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_BP32_BLUE);
+    this.setInputsInline(true);    
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggBP32SetRumble'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_SetRumble)
+    this.appendValueInput("FORCE")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_BP32_FORCE);
+    this.appendValueInput("DURATION")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_BP32_DURATION);
+    this.setInputsInline(true);    
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
     this.setTooltip("");
     this.setHelpUrl("");
   }
