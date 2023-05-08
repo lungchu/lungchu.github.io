@@ -7,7 +7,7 @@ Blockly.Arduino['ggMiniCarInit']=function(block) {
   var R2 = Blockly.Arduino.valueToCode(block, 'R2', Blockly.Arduino.ORDER_ATOMIC);
   var RightReverse = block.getFieldValue('RightReverse') === 'TRUE';
   Blockly.Arduino.definitions_['ggMiniCarInitInclude'] = '#include <GG_MiniCar.h>';
-  Blockly.Arduino.definitions_['ggMiniCarInit'] = 'DC_Car ggCar('+ L1 +','+ L2 +','+ LeftReverse +','+ R1 +','+ R2 +','+ RightReverse +',true);';
+  Blockly.Arduino.definitions_['ggMiniCarInit'] = 'DC_Car ggCar(-1,-1,false,-1,-1,false,'+ L1 +','+ L2 +','+ LeftReverse +','+ R1 +','+ R2 +','+ RightReverse +',true);';
   var code = '';
   return code;
 };
