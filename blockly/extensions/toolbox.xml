@@ -26,11 +26,11 @@
        <field name="RightReverse">FALSE</field>
     </block>
     <block type="ggMiniCarInit4WD">
-		<field name="LF1">12</field>
-		<field name="LF2">13</field>
+		<field name="LF1">16</field>
+		<field name="LF2">17</field>
 		<field name="LeftFrontReverse">FALSE</field>
-		<field name="RF1">16</field>
-		<field name="RF2">17</field>
+		<field name="RF1">18</field>
+		<field name="RF2">19</field>
 		<field name="RightRearReverse">FALSE</field>
 		<field name="LR1">25</field>
 		<field name="LR2">26</field>
@@ -108,6 +108,9 @@
 					<field name="NUM">20</field>
 				</block>
 			</value>
+    </block>
+    <block type="ggMiniCarMecanumMove">
+			<field name="MoveType">Forward</field>
     </block>
     <block type="ggMiniCarUSSetUnit">
       <field name="USUnit">1</field>

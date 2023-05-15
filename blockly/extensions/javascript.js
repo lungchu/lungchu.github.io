@@ -109,6 +109,12 @@ Blockly.Arduino['ggMiniCarMove']=function(block) {
   return code;
 };
 
+Blockly.Arduino['ggMiniCarMecanumMove']=function(block) {
+  var Move = block.getFieldValue('MoveType');
+  var code = 'ggCar.'+ Move +'();\n';
+  return code;
+};
+
 Blockly.Arduino['ggMiniCarUSSetUnit']=function(block) {
   var USUnit = block.getFieldValue('USUnit');
   var code = 'Set_US_Measure_Unit('+ USUnit +');\n';

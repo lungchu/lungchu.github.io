@@ -234,6 +234,18 @@ Blockly.Blocks['ggMiniCarMove'] = {
   }
 };
 
+Blockly.Blocks['ggMiniCarMecanumMove'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_MINICAR_MecanumMOVE_SHOW)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_MINICAR_MecanumMOVE), "MoveType");
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
+  }
+};
+
 Blockly.Blocks['ggMiniCarUSSetUnit'] = {
   init: function() {
     this.appendDummyInput()
