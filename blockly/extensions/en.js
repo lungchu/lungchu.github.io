@@ -46,6 +46,7 @@ Blockly.Msg.GG_MINICAR_SHARPIR_MODEL=[["GP2Y0A51SK0F","1"],["GP2Y0A41SK0F","2"],
 Blockly.Msg.GG_MINICAR_SHARPIR_PIN="OUT PIN"
 Blockly.Msg.GG_MINICAR_SHARP_MODEL_SHOW="Model:"
 Blockly.Msg.GG_MINICAR_STICK_DRIVE="Use JoyStick Drive Mini Car Stick"
+Blockly.Msg.GG_MINICAR_STICK_Mecanum_DRIVE="Use JoyStick Drive Mecanum Mini Car Stick"
 Blockly.Msg.GG_MINICAR_STICK_INIT="Set JoyStick Origin"
 Blockly.Msg.GG_MINICAR_STICK_RADIUS="Radius"
 Blockly.Msg.GG_MINICAR_TRACE="Trace"
@@ -119,6 +120,8 @@ Blockly.Msg.GG_BP32_BLUE="Blue="
 Blockly.Msg.GG_BP32_SetRumble="Set Rumble"
 Blockly.Msg.GG_BP32_FORCE="Force="
 Blockly.Msg.GG_BP32_DURATION="Duration="
+Blockly.Msg.GG_BP32_6Axis="Accelerometer & Gyroscope"
+Blockly.Msg.GG_BP32_6Axis_VALUE=[["Gyro X","gyroX()"],["Gyro Y","gyroY()"],["Gyro Z","gyroZ()"],["Accel X","accelX()"],["Accel Y","accelY()"],["Accel Z","accelZ()"]]
 // Dabble
 Blockly.Msg.GG_DABBLE_BEGIN="Dabble Begin BLE="
 Blockly.Msg.GG_DABBLE_BLEMODE=[["SERIAL","Serial"],["ESP32","ESP32"]]

@@ -159,6 +159,18 @@
 		    </shadow>
 		  </value> 	  
     </block>
+    <block type="ggMiniCarStickMecanumDrive">
+    	<value name="SitckX">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
+    	<value name="SitckY">
+		    <shadow type="math_number">
+			    <field name="NUM">0</field>
+		    </shadow>
+		  </value> 	  
+    </block>
 <!-- ggMiniCar Servo -->
     <category name="ggMiniCarServo">
     <block type="ggMiniCar_servo_custom_attach">
@@ -327,6 +339,9 @@
     </block>
     <block type="ggBP32_PS4Button_Value">
       <field name="Button">axisX()</field>
+    </block>
+    <block type="ggBP32_PS4_6Axis_Value">
+      <field name="Value">gyroX()</field>
     </block>
     <block type="ggBP32_Battery"></block>
     <block type="ggBP32SetPlayerLEDs">

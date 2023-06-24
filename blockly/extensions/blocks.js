@@ -405,6 +405,23 @@ Blockly.Blocks['ggMiniCarStickDrive']={
     this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
   }
 };
+
+Blockly.Blocks['ggMiniCarStickMecanumDrive']={
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_MINICAR_STICK_Mecanum_DRIVE);
+    this.appendValueInput("SitckX")
+				.setCheck("Number")
+				.appendField("X=");
+    this.appendValueInput("SitckY")
+        .setCheck("Number")
+				.appendField("Y=");
+		this.setInputsInline(!0);
+		this.setPreviousStatement(!0);
+		this.setNextStatement(!0);
+    this.setColour(Blockly.Msg["HUE_GG_MiniCar"]);
+  }
+};
 //ggMiniCar Servo
 Blockly.Blocks['ggMiniCar_servo_custom_attach']={
 	init:function(){
@@ -848,6 +865,19 @@ Blockly.Blocks['ggBP32_PS4Button_Value'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.GG_BP32_PS4)
         .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_BP32_PS4_BUTTON_VALUE), "Button")
+        .appendField(Blockly.Msg.GG_BP32_BUTTON_VALUE_SHOW);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_BP32"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggBP32_PS4_6Axis_Value'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_BP32_6Axis)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_BP32_6Axis_VALUE), "Value")
         .appendField(Blockly.Msg.GG_BP32_BUTTON_VALUE_SHOW);
     this.setOutput(true, "Number");
     this.setColour(Blockly.Msg["HUE_GG_BP32"]);

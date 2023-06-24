@@ -165,6 +165,13 @@ Blockly.Arduino['ggMiniCarStickDrive']=function(block) {
   var code = 'ggCar.JoystickDrive('+ SitckX +','+ SitckY +');\n';
   return code;
 };
+
+Blockly.Arduino['ggMiniCarStickMecanumDrive']=function(block) {
+  var SitckX=Blockly.Arduino.valueToCode(this,"SitckX",Blockly.Arduino.ORDER_ATOMIC),
+      SitckY=Blockly.Arduino.valueToCode(this,"SitckY",Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'ggCar.JoystickMecanumDrive('+ SitckX +','+ SitckY +');\n';
+  return code;
+};
 //ggMiniCar Servo
 Blockly.Arduino['ggMiniCar_servo_custom_attach']=function() {
   var a=Blockly.Arduino.valueToCode(this,"PIN",Blockly.Arduino.ORDER_ATOMIC),
@@ -386,6 +393,13 @@ Blockly.Arduino['ggBP32_PS4Button_Value']=function(block) {
   } else {
     code = 'ggGamepadBP32->' + Button;
   }
+  return [code, Blockly.Arduino.ORDER_NONE];
+};
+
+Blockly.Arduino['ggBP32_PS4_6Axis_Value']=function(block) {
+  var Value = block.getFieldValue('Value');
+  var code;
+  code = 'ggGamepadBP32->' + Value;
   return [code, Blockly.Arduino.ORDER_NONE];
 };
 

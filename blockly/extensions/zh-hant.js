@@ -46,6 +46,7 @@ Blockly.Msg.GG_MINICAR_SHARPIR_MODEL=[["GP2Y0A51SK0F","1"],["GP2Y0A41SK0F","2"],
 Blockly.Msg.GG_MINICAR_SHARPIR_PIN="引腳接腳位"
 Blockly.Msg.GG_MINICAR_SHARP_MODEL_SHOW="型號:"
 Blockly.Msg.GG_MINICAR_STICK_DRIVE="使用搖桿操控光光小車 搖桿"
+Blockly.Msg.GG_MINICAR_STICK_Mecanum_DRIVE="使用搖桿操控光光【麥克納姆輪】小車 搖桿"
 Blockly.Msg.GG_MINICAR_STICK_INIT="設定搖桿 中心點"
 Blockly.Msg.GG_MINICAR_STICK_RADIUS="半徑"
 Blockly.Msg.GG_MINICAR_TRACE="循跡"
@@ -111,7 +112,8 @@ Blockly.Msg.GG_BP32_BLUE="藍="
 Blockly.Msg.GG_BP32_SetRumble="震動"
 Blockly.Msg.GG_BP32_FORCE="強度="
 Blockly.Msg.GG_BP32_DURATION="持續="
-
+Blockly.Msg.GG_BP32_6Axis="加速度計和陀螺儀的"
+Blockly.Msg.GG_BP32_6Axis_VALUE=[["陀螺儀X","gyroX()"],["陀螺儀Y","gyroY()"],["陀螺儀Z","gyroZ()"],["加速度X","accelX()"],["加速度Y","accelY()"],["加速度Z","accelZ()"]]
 // Dabble
 Blockly.Msg.GG_DABBLE_BEGIN="啟用Dabble 藍芽="
 Blockly.Msg.GG_DABBLE_BLEMODE=[["序列","Serial"],["ESP32","ESP32"]]
