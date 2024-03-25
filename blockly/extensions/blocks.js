@@ -1443,3 +1443,399 @@ Blockly.Blocks['ggLinkit_Remote_update_textlabel']={
     this.setTooltip(Blockly.Msg.LINKIT_LREMOTE_UPDATE_TEXTLABEL_TOOLTIP)
   }
 };
+// INA226數位電表
+Blockly.Blocks['ggINA226Begin'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226Begin);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226Init'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226Init);
+    this.setOutput(true, "Boolean");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226resetINA226'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226reset_INA226);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226setCorrectionFactor'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226Set);
+    this.appendValueInput("Corr")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_INA226CorrectionFactor);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226setAverage'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226Set)
+        .appendField(Blockly.Msg.GG_INA226Average)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_INA226Averages), "Averages");
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226setConversionTimeA'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226Set)
+        .appendField(Blockly.Msg.GG_INA226ConversionTime)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_INA226ConvTime), "ConvTimes");
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226setConversionTimeB'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226Set)
+        .appendField(Blockly.Msg.GG_INA226ShuntTime)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_INA226ConvTime), "ShuntConvTime")
+        .appendField(Blockly.Msg.GG_INA226BusTime)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_INA226ConvTime), "BusConvTime");
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226setMeasureMode'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226Set)
+        .appendField(Blockly.Msg.GG_INA226MeasureMode)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_INA226Mode,), "Mode");
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226setCurrentRange'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226Set)
+        .appendField(Blockly.Msg.GG_INA226Current)
+        .appendField(Blockly.Msg.GG_INA226Range)
+        .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_INA226CurrentRange,), "Range");
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226setResistorRange'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226Set);
+    this.appendValueInput("Resistor")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_INA226Resistor);
+    this.appendValueInput("Range")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_INA226Range);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226getShuntVoltage_mV'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226getShuntVoltage_mV);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226getShuntVoltage_V'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226getShuntVoltage_V);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226getBusVoltage_V'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226getBusVoltage_V);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226getCurrent_mA'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226getCurrent_mA);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226getCurrent_A'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226getCurrent_A);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226getBusPower'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226getBusPower);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226startSingleMeasurement'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226startSingleMeasurement);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+  }
+};
+
+Blockly.Blocks['ggINA226startSingleMeasurementNoWait'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226startSingleMeasurementNoWait);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+  }
+};
+
+Blockly.Blocks['ggINA226isBusy'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226isBusy);
+    this.setOutput(true, "Boolean");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226powerDown'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226powerDown);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+  }
+};
+
+Blockly.Blocks['ggINA226powerUp'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226powerUp);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+  }
+};
+
+Blockly.Blocks['ggINA226waitUntilConversionCompleted'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226waitUntilConversionCompleted);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+  }
+};
+
+Blockly.Blocks['ggINA226setAlertPinActiveHigh'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226setAlertPinActiveHigh);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226enableAlertLatch'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226enableAlertLatch);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226enableConvReadyAlert'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226enableConvReadyAlert);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226setAlertType'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.GG_INA226Set)
+      .appendField(Blockly.Msg.GG_INA226AlertType)
+      .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_INA226Type), "Type");
+    this.appendValueInput("Limit")
+      .setCheck("Number")
+      .appendField(Blockly.Msg.GG_INA226Limit);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226readAndClearFlags'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226readAndClearFlags);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226getI2cErrorCode'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226getI2cErrorCode);
+    this.setOutput(true, "Number");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226overflow'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226overflow);
+    this.setOutput(true, "Boolean");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226convAlert'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226convAlert);
+    this.setOutput(true, "Boolean");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggINA226limitAlert'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_INA226limitAlert);
+    this.setOutput(true, "Boolean");
+    this.setColour(Blockly.Msg["HUE_GG_INA226"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};

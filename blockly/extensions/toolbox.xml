@@ -26,38 +26,38 @@
        <field name="RightReverse">FALSE</field>
     </block>
     <block type="ggMiniCarInit4WD">
-		<field name="LF1">16</field>
-		<field name="LF2">17</field>
-		<field name="LeftFrontReverse">FALSE</field>
-		<field name="RF1">18</field>
-		<field name="RF2">19</field>
-		<field name="RightRearReverse">FALSE</field>
-		<field name="LR1">25</field>
-		<field name="LR2">26</field>
-		<field name="LeftRearReverse">FALSE</field>
-		<field name="RR1">32</field>
-		<field name="RR2">33</field>
-		<field name="RightFrontReverse">FALSE</field>
+		  <field name="LF1">16</field>
+		  <field name="LF2">17</field>
+		  <field name="LeftFrontReverse">FALSE</field>
+		  <field name="RF1">18</field>
+		  <field name="RF2">19</field>
+		  <field name="RightRearReverse">FALSE</field>
+		  <field name="LR1">25</field>
+		  <field name="LR2">26</field>
+		  <field name="LeftRearReverse">FALSE</field>
+		  <field name="RR1">32</field>
+		  <field name="RR2">33</field>
+		  <field name="RightFrontReverse">FALSE</field>
     </block>
     <block type="ggMiniCarInitUS">
       <field name="SensorPos">Left</field>
 			<value name="USTrigPin">
-				<shadow type="math_number">
-					<field name="NUM">12</field>
-				</shadow>
+			  <shadow type="math_number">
+				  <field name="NUM">12</field>
+			  </shadow>
 			</value>
 			<value name="USEchoPin">
-				<shadow type="math_number">
-					<field name="NUM">13</field>
-				</shadow>
+			  <shadow type="math_number">
+				  <field name="NUM">13</field>
+			  </shadow>
 			</value>
     </block>
     <block type="ggMiniCarInitIR">
       <field name="SensorPos">fLeft</field>
 			<value name="PIN">
-				<shadow type="math_number">
-					<field name="NUM">35</field>
-				</shadow>
+			  <shadow type="math_number">
+			    <field name="NUM">35</field>
+			  </shadow>
 			</value>
     </block>
     <block type="ggMiniCarInitVL53L0X">
@@ -173,55 +173,55 @@
     </block>
 <!-- ggMiniCar Servo -->
     <category name="ggMiniCarServo">
-    <block type="ggMiniCar_servo_custom_attach">
-			<value name="PIN">
-				<block type="math_number">
-					<field name="NUM">0</field>
-				</block>
-			</value>
-			<value name="MAX">
-				<block type="math_number">
-					<field name="NUM">544</field>
-				</block>
-			</value>
-			<value name="MIN">
-				<block type="math_number">
-					<field name="NUM">2400</field>
-				</block>
-			</value>
-    </block>
-		<block type="ggMiniCar_servo_write">
-			<value name="PIN">
-				<block type="math_number">
-					<field name="NUM">0</field>
-				</block>
-			</value>
-			<value name="ANGLE">
-				<block type="math_number">
-					<field name="NUM">0</field>
-				</block>
-			</value>
-		</block>
-		<block type="ggMiniCar_servo_writeus">
-			<value name="PIN">
-				<block type="math_number">
-					<field name="NUM">0</field>
-				</block>
-			</value>
-			<value name="ANGLE_US">
-				<block type="math_number">
-					<field name="NUM">1500</field>
-				</block>
-			</value>
-		</block>
-		<block type="ggMiniCar_servo_read">
-  		<value name="PIN">
-				<block type="math_number">
-					<field name="NUM">0</field>
-				</block>
-			</value>
-    </block>
-  </category>
+      <block type="ggMiniCar_servo_custom_attach">
+			  <value name="PIN">
+				  <block type="math_number">
+					  <field name="NUM">0</field>
+				  </block>
+			  </value>
+			  <value name="MAX">
+				  <block type="math_number">
+					  <field name="NUM">544</field>
+				  </block>
+			  </value>
+			  <value name="MIN">
+				  <block type="math_number">
+					  <field name="NUM">2400</field>
+				  </block>
+			  </value>
+      </block>
+		  <block type="ggMiniCar_servo_write">
+			  <value name="PIN">
+				  <block type="math_number">
+					  <field name="NUM">0</field>
+				  </block>
+			  </value>
+			  <value name="ANGLE">
+				  <block type="math_number">
+					  <field name="NUM">0</field>
+				  </block>
+			  </value>
+		  </block>
+		  <block type="ggMiniCar_servo_writeus">
+			  <value name="PIN">
+				  <block type="math_number">
+					  <field name="NUM">0</field>
+				  </block>
+			  </value>
+			  <value name="ANGLE_US">
+				  <block type="math_number">
+					  <field name="NUM">1500</field>
+				  </block>
+			  </value>
+		  </block>
+		  <block type="ggMiniCar_servo_read">
+  			<value name="PIN">
+				  <block type="math_number">
+					  <field name="NUM">0</field>
+				  </block>
+			  </value>
+    	</block>
+  	</category>
   </category>
 <!-- 光光PS2 -->
   <category name="ggPS2">
@@ -651,10 +651,8 @@
 		</block>
 		<block type="ggLinkit_Remote_connect_status"></block>
 		<block type="ggLinkit_Remote_process"></block>
-		<block type="ggLinkit_Remote_is_written">
-		</block>
-		<block type="ggLinkit_Remote_read_value">
-		</block>
+		<block type="ggLinkit_Remote_is_written"></block>
+		<block type="ggLinkit_Remote_read_value"></block>
 		<block type="ggLinkit_Remote_update_textlabel">
 			<value name="CONTENT">
 				<block type="text">
@@ -663,4 +661,73 @@
 			</value>
 		</block>
 	</category>
+<!-- INA226數位電表 -->
+  <category name="ggINA226">
+    <block type="ggINA226Begin"></block>
+    <block type="ggINA226Init"></block>
+    <block type="ggINA226resetINA226"></block>
+    <block type="ggINA226setCorrectionFactor">
+    	<value name="Corr">
+				<shadow type="math_number">
+					<field name="NUM">1.0</field>
+				</shadow>
+			</value>
+    </block>
+    <block type="ggINA226setAverage">
+      <field name="Averages">0x0400</field>
+    </block>
+     <block type="ggINA226setConversionTimeA">
+      <field name="ConvTimes">0b00000000</field>
+    </block>
+    <block type="ggINA226setConversionTimeB">
+      <field name="ShuntConvTime">0b00000000</field>
+      <field name="BusConvTime">0b00000000</field>
+    </block>
+    <block type="ggINA226setMeasureMode">
+      <field name="Mode">CONTINUOUS</field>
+    </block>
+    <block type="ggINA226setCurrentRange">
+      <field name="Range">100</field>
+    </block>
+    <block type="ggINA226setResistorRange">
+    	<value name="Resistor">
+				<shadow type="math_number">
+					<field name="NUM">100</field>
+				</shadow>
+			</value>
+    	<value name="Range">
+				<shadow type="math_number">
+					<field name="NUM">100</field>
+				</shadow>
+			</value>
+    </block>
+    <block type="ggINA226getShuntVoltage_mV"></block>
+    <block type="ggINA226getShuntVoltage_V"></block>
+    <block type="ggINA226getBusVoltage_V"></block>
+    <block type="ggINA226getCurrent_mA"></block>
+    <block type="ggINA226getCurrent_A"></block>
+    <block type="ggINA226getBusPower"></block>
+    <block type="ggINA226startSingleMeasurement"></block>
+    <block type="ggINA226startSingleMeasurementNoWait"></block>
+    <block type="ggINA226isBusy"></block>
+    <block type="ggINA226powerDown"></block>
+    <block type="ggINA226powerUp"></block>
+    <block type="ggINA226waitUntilConversionCompleted"></block>
+    <block type="ggINA226setAlertPinActiveHigh"></block>
+    <block type="ggINA226enableAlertLatch"></block>
+    <block type="ggINA226enableConvReadyAlert"></block>
+    <block type="ggINA226setAlertType">    
+      <field name="Type">BUS_UNDER</field>
+    	<value name="Limit">
+				<shadow type="math_number">
+					<field name="NUM">100</field>
+				</shadow>
+			</value>
+    </block>
+    <block type="ggINA226readAndClearFlags"></block>
+    <block type="ggINA226getI2cErrorCode"></block>
+    <block type="ggINA226overflow"></block>
+    <block type="ggINA226convAlert"></block>
+    <block type="ggINA226limitAlert"></block>
+  </category>
 </category>

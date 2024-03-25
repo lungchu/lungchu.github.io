@@ -666,7 +666,194 @@ Blockly.Arduino['ggLinkit_Remote_read_value']=function(){
 
 Blockly.Arduino['ggLinkit_Remote_update_textlabel']=function(){
   var a=this.getFieldValue("NAME"),
-      b=Blockly.Arduino.valueToCode(this,"CONTENT",Blockly.Arduino.ORDER_ATOMIC)||"";
+  b=Blockly.Arduino.valueToCode(this,"CONTENT",Blockly.Arduino.ORDER_ATOMIC)||"";
   a=a.replace(/"/g,"");
   return a+".updateText(String("+b+"));\n"
+};
+//GuangGuang INA226
+Blockly.Arduino['ggINA226Begin']=function(block) {
+  //include內容(變數名字尾加上Include)，這一個一定要在define的前面
+  Blockly.Arduino.definitions_['ggINA226InitInclude'] = '#include <Wire.h>\n#include <INA226_WE.h>\n';
+  //define內容
+  Blockly.Arduino.definitions_['ggINA226Init'] = '#define I2C_ADDRESS 0x40\n\n/* There are several ways to create your INA226 object:\n * INA226_WE ina226 = INA226_WE(); -> uses I2C Address = 0x40 / Wire\n * INA226_WE ina226 = INA226_WE(I2C_ADDRESS);\n * INA226_WE ina226 = INA226_WE(&Wire); -> uses I2C_ADDRESS = 0x40, pass any Wire Object\n * INA226_WE ina226 = INA226_WE(&Wire, I2C_ADDRESS);\n */\nINA226_WE ina226 = INA226_WE(I2C_ADDRESS);\n';
+  //設定區塊程式碼(產生在setup()區塊內)
+  Blockly.Arduino.setups_['ggINA226Init']='Wire.begin();\n  if(!ina226.init()){\n    Serial.println("Failed to init INA226. Check your wiring.");\n    while(1){}\n  }\n  ina226.waitUntilConversionCompleted(); //if you comment this line the first data might be zero\n';
+
+  var code = '';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226Init']=function(block) {
+  //include內容(變數名字尾加上Include)，這一個一定要在define的前面
+  Blockly.Arduino.definitions_['ggINA226InitInclude'] = '#include <Wire.h>\n#include <INA226_WE.h>\n';
+  //define內容
+  Blockly.Arduino.definitions_['ggINA226Init'] = '#define I2C_ADDRESS 0x40\n\n/* There are several ways to create your INA226 object:\n * INA226_WE ina226 = INA226_WE(); -> uses I2C Address = 0x40 / Wire\n * INA226_WE ina226 = INA226_WE(I2C_ADDRESS);\n * INA226_WE ina226 = INA226_WE(&Wire); -> uses I2C_ADDRESS = 0x40, pass any Wire Object\n * INA226_WE ina226 = INA226_WE(&Wire, I2C_ADDRESS);\n */\nINA226_WE ina226 = INA226_WE(I2C_ADDRESS);\n';
+  //設定區塊程式碼(產生在setup()區塊內)
+  //Blockly.Arduino.setups_['ggINA226Init']='  Wire.begin();\n  if(!ina226.init()){\n    Serial.println("Failed to init INA226. Check your wiring.");\n    while(1){}\n  }\n  ina226.waitUntilConversionCompleted(); //if you comment this line the first data might be zero\n';
+
+  var code = 'ina226.init()';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226resetINA226']=function(block) {
+  var code = 'ina226.reset_INA226();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226setCorrectionFactor']=function(block) {
+  var Corr = Blockly.Arduino.valueToCode(block, 'Corr', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'ina226.setCorrectionFactor('+Corr+');\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226setAverage']=function(block) {
+  var Averages = block.getFieldValue('Averages');
+  var code = 'ina226.setAverage('+Averages+');\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226setConversionTimeA']=function(block) {
+  var ConvTimes = block.getFieldValue('ConvTimes');
+  var code = 'ina226.setConversionTime('+ConvTimes+');\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226setConversionTimeB']=function(block) {
+  var ShuntConvTime = block.getFieldValue('ShuntConvTime');
+  var BusConvTime = block.getFieldValue('BusConvTime');
+  var code = 'ina226.setConversionTime('+ShuntConvTime+','+BusConvTime+');\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226setMeasureMode']=function(block) {
+  var Mode = block.getFieldValue('Mode');
+  var code = 'ina226.setMeasureMode('+Mode+');\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226setCurrentRange']=function(block) {
+  var Range = block.getFieldValue('Range');
+  //include內容(變數名字尾加上Include)，這一個一定要在define的前面
+  Blockly.Arduino.definitions_[''] = '';
+  //define內容
+  Blockly.Arduino.definitions_[''] = '';
+  //設定區塊程式碼(產生在setup()區塊內)
+  Blockly.Arduino.setups_['']='';
+
+  var code = 'ina226.setCurrentRange('+Range+');\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226setResistorRange']=function(block) {
+  var Resistor = Blockly.Arduino.valueToCode(block, 'Resistor', Blockly.Arduino.ORDER_ATOMIC);
+  var Range = Blockly.Arduino.valueToCode(block, 'Range', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'ina226.setResistorRange('+Resistor+','+Range+');\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226getShuntVoltage_mV']=function(block) {
+  var code = 'ina226.getShuntVoltage_mV()';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226getShuntVoltage_V']=function(block) {
+  var code = 'ina226.getShuntVoltage_V()';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226getBusVoltage_V']=function(block) {
+  var code = 'ina226.getBusVoltage_V()';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226getCurrent_mA']=function(block) {
+  var code = 'ina226.getCurrent_mA()';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226getCurrent_A']=function(block) {
+  var code = 'ina226.getCurrent_A()';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226getBusPower']=function(block) {
+  var code = 'ina226.getBusPower()';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226startSingleMeasurement']=function(block) {
+  var code = 'ina226.startSingleMeasurement();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226startSingleMeasurementNoWait']=function(block) {
+  var code = 'ina226.startSingleMeasurementNoWait();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226isBusy']=function(block) {
+  var code = 'ina226.isBusy()';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226powerDown']=function(block) {
+  var code = 'ina226.powerDown();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226powerUp']=function(block) {
+  var code = 'ina226.powerUp();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226waitUntilConversionCompleted']=function(block) {
+  var code = 'ina226.waitUntilConversionCompleted();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226setAlertPinActiveHigh']=function(block) {
+  var code = 'ina226.setAlertPinActiveHigh();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226enableAlertLatch']=function(block) {
+  var code = 'ina226.enableAlertLatch();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226enableConvReadyAlert']=function(block) {
+  var code = 'ina226.enableConvReadyAlert();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226setAlertType']=function(block) {
+  var Type = block.getFieldValue('Type');
+  var Limit = Blockly.Arduino.valueToCode(block, 'Limit', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'ina226.setAlertType('+Type+','+Limit+');\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226readAndClearFlags']=function(block) {
+  var code = 'ina226.readAndClearFlags();\n';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226getI2cErrorCode']=function(block) {
+  var code = 'ina226.getI2cErrorCode()';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226overflow']=function(block) {
+  var code = 'ina226.overflow';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226convAlert']=function(block) {
+  var code = 'ina226.convAlert';//積木所在位置的程式碼
+  return code;
+};
+
+Blockly.Arduino['ggINA226limitAlert']=function(block) {
+  var code = 'ina226.limitAlert';//積木所在位置的程式碼
+  return code;
 };

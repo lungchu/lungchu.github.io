@@ -6,6 +6,7 @@ Blockly.Msg["HUE_GG_PS3_EVENT"] = 210;
 Blockly.Msg["HUE_GG_DABBLE"] = 260;
 Blockly.Msg["HUE_GG_LINKITREMOTE"] = 310;
 Blockly.Msg["HUE_GG_PS4"] = 20;
+Blockly.Msg["HUE_GG_INA226"] = 70;
 
 Blockly.Msg.GG_BUTTON="鈕"
 Blockly.Msg.GG_ISPRESSED="是按下的"
@@ -132,3 +133,44 @@ Blockly.Msg.GG_DABBLE_GAMEPAD_GETSTICKNAME="的數值"
 //光光Linkit Remote
 Blockly.Msg.GG_LINKITREMOTE_SETTYPE=[[Blockly.Msg.LINKIT_SET_LREMOTE_TYPE_VERTICAL,"RC_PORTRAIT"],[Blockly.Msg.LINKIT_SET_LREMOTE_TYPE_HORIZONTAL,"RC_LANDSCAPE"]]
 Blockly.Msg.GG_LINKITREMOTE_COLORS=[[Blockly.Msg.LINKIT_LREMOTE_COLOUR_ORANGE,"orange"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_BLUE,"blue"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_GREEN,"green"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_PINK,"pink"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_GRAY,"gray"],[Blockly.Msg.LINKIT_LREMOTE_COLOUR_YELLOW,"yellow"]]
+//INA226數位電表
+Blockly.Msg.GG_INA226Begin="啟用INA226數位電表"
+Blockly.Msg.GG_INA226Set="設定 "
+Blockly.Msg.GG_INA226Init="初始化INA226數位電表"
+Blockly.Msg.GG_INA226reset_INA226="重置INA226數位電表"
+Blockly.Msg.GG_INA226CorrectionFactor="校正係數="
+Blockly.Msg.GG_INA226Average="一次測量的平均樣本數="
+Blockly.Msg.GG_INA226ConversionTime="轉換時間="
+Blockly.Msg.GG_INA226ShuntTime="分流電壓轉換時間="
+Blockly.Msg.GG_INA226BusTime="總線電壓轉換時間="
+Blockly.Msg.GG_INA226MeasureMode="測量模式="
+Blockly.Msg.GG_INA226Current="電流"
+Blockly.Msg.GG_INA226Resistor="電阻="
+Blockly.Msg.GG_INA226Range="範圍="
+Blockly.Msg.GG_INA226getShuntVoltage_mV="分流電壓_mV"
+Blockly.Msg.GG_INA226getShuntVoltage_V="分流電壓_V"
+Blockly.Msg.GG_INA226getBusVoltage_V="總線電壓_V"
+Blockly.Msg.GG_INA226getCurrent_mA="電流_mA"
+Blockly.Msg.GG_INA226getCurrent_A="電流_A"
+Blockly.Msg.GG_INA226getBusPower="功率"
+Blockly.Msg.GG_INA226startSingleMeasurement="開始一次測量"
+Blockly.Msg.GG_INA226startSingleMeasurementNoWait="開始一次測量(沒有等待)"
+Blockly.Msg.GG_INA226isBusy="INA226忙碌中"
+Blockly.Msg.GG_INA226powerDown="關閉INA226"
+Blockly.Msg.GG_INA226powerUp="開啟INA226"
+Blockly.Msg.GG_INA226waitUntilConversionCompleted="等待至測量完畢"
+Blockly.Msg.GG_INA226setAlertPinActiveHigh="設定觸發報警時報警腳位為高電位"
+Blockly.Msg.GG_INA226enableAlertLatch="啟用報警閂鎖"
+Blockly.Msg.GG_INA226enableConvReadyAlert="啟用測量完畢報警"
+Blockly.Msg.GG_INA226AlertType="報警型態="
+Blockly.Msg.GG_INA226readAndClearFlags="讀取並清除旗標"
+Blockly.Msg.GG_INA226getI2cErrorCode="I2C錯誤碼"
+Blockly.Msg.GG_INA226overflow="溢位"
+Blockly.Msg.GG_INA226convAlert="測量完畢"
+Blockly.Msg.GG_INA226limitAlert="觸發報警"
+Blockly.Msg.GG_INA226Averages=[["1","AVERAGE_1"],["4","AVERAGE_4"],["16","AVERAGE_16"],["64","AVERAGE_64"],["128","AVERAGE_128"],["256","AVERAGE_256"],["512","AVERAGE_512"],["1024","AVERAGE_1024"]]
+Blockly.Msg.GG_INA226ConvTime=[[ "140","CONV_TIME_140"],[ "204","CONV_TIME_204"],[ "332","CONV_TIME_332"],[ "588","CONV_TIME_588"],["1100","CONV_TIME_1100"],["2116","CONV_TIME_2116"],["4156","CONV_TIME_4156"],["8244","CONV_TIME_8244"]]
+Blockly.Msg.GG_INA226Mode=[["關閉","POWER_DOWN"],["觸發","TRIGGERED"],["連續","CONTINUOUS"]]
+Blockly.Msg.GG_INA226CurrentRange=[["400 ma","MA_400"],["800 ma","MA_800"]]
+Blockly.Msg.GG_INA226Type=[["分流電壓大於","SHUNT_OVER"],["分流電壓小於","SHUNT_UNDER"],["總線電壓大於","BUS_OVER"],["總線電壓小於","BUS_UNDER"],["功率大於","POWER_OVER"],["電流大於","CURRENT_OVER"],["電流小於","CURRENT_UNDER"],]
+Blockly.Msg.GG_INA226Limit=""

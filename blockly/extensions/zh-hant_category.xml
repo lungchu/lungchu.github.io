@@ -7,4 +7,5 @@
 <category><name>ggBP32</name><replace>Bluepad32</replace></category>
 <category><name>ggDabble</name><replace>Dabble</replace></category>
 <category><name>ggDabbleGamePad</name><replace>遊戲手柄</replace></category>
+<category><name>ggINA226</name><replace>INA226數位電表</replace></category>
 </xml>
