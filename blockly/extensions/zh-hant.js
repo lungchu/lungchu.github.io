@@ -17,7 +17,7 @@ Blockly.Msg.GG_RELEASE="放開"
 Blockly.Msg.GG_BUTTON_ANALOG="類比值"
 Blockly.Msg.GG_MICRO_SECOND="毫秒"
 //光光ESP32
-Blockly.Msg.GG_ESP32_DELAY="延遲"
+Blockly.Msg.GG_ESP32_DELAY="ESP32原生延遲"
 Blockly.Msg.GG_ESP32_TICKS="滴答"
 //光光小車
 Blockly.Msg.GG_MINICAR_ARCSPEED="轉彎快慢(0..車速)="
