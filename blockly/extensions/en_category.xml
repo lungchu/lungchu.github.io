@@ -1,5 +1,6 @@
 <xml>
 <category><name>GuangGuang</name><replace>Guang Guang Blocks</replace></category>
+<category><name>ggESP32</name><replace>ESP32 Only</replace></category>
 <category><name>ggMiniCar</name><replace>Guang Guang Mini Car</replace></category>
 <category><name>ggMiniCarServo</name><replace>Guang Guang Servo For Mini Car</replace></category>
 <category><name>ggPS2</name><replace>PS2 Controller</replace></category>

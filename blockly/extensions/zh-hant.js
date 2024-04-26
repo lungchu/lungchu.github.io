@@ -7,6 +7,7 @@ Blockly.Msg["HUE_GG_DABBLE"] = 260;
 Blockly.Msg["HUE_GG_LINKITREMOTE"] = 310;
 Blockly.Msg["HUE_GG_PS4"] = 20;
 Blockly.Msg["HUE_GG_INA226"] = 70;
+Blockly.Msg["HUE_GG_ESP32"] = 120;
 
 Blockly.Msg.GG_BUTTON="鈕"
 Blockly.Msg.GG_ISPRESSED="是按下的"
@@ -14,6 +15,10 @@ Blockly.Msg.GG_JUST="剛"
 Blockly.Msg.GG_PRESS="按下"
 Blockly.Msg.GG_RELEASE="放開"
 Blockly.Msg.GG_BUTTON_ANALOG="類比值"
+Blockly.Msg.GG_MICRO_SECOND="毫秒"
+//光光ESP32
+Blockly.Msg.GG_ESP32_DELAY="延遲"
+Blockly.Msg.GG_ESP32_TICKS="滴答"
 //光光小車
 Blockly.Msg.GG_MINICAR_ARCSPEED="轉彎快慢(0..車速)="
 Blockly.Msg.GG_MINICAR_AVOID="避障"

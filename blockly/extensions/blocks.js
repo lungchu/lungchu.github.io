@@ -1,3 +1,30 @@
+// GuangGuang ESP32
+Blockly.Blocks['ggESP32vTaskDelay'] = {
+  init: function() {
+    this.appendValueInput("Ticks")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_ESP32_DELAY);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_ESP32_TICKS);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_ESP32"]);
+  }
+};
+Blockly.Blocks['ggESP32vTaskDelayMs'] = {
+  init: function() {
+    this.appendValueInput("MicroSecond")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.GG_ESP32_DELAY);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.GG_MICRO_SECOND);
+    this.setInputsInline(true);
+    this.setPreviousStatement(!0,null);
+    this.setNextStatement(!0,null);
+    this.setColour(Blockly.Msg["HUE_GG_ESP32"]);
+  }
+};
 // GuangGuang Mini Car
 Blockly.Blocks['ggMiniCarInit'] = {
   init: function() {

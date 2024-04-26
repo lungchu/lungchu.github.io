@@ -1,3 +1,14 @@
+//GuangGuang ESP32
+Blockly.Arduino['ggESP32vTaskDelay']=function(block) {
+  var Ticks = Blockly.Arduino.valueToCode(block, 'Ticks', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'vTaskDelay('+Ticks+');\n';
+  return code;
+};
+Blockly.Arduino['ggESP32vTaskDelayMs']=function(block) {
+  var MicroSecond = Blockly.Arduino.valueToCode(block, 'MicroSecond', Blockly.Arduino.ORDER_ATOMIC);
+  var code = 'vTaskDelay(pdMS_TO_TICKS('+MicroSecond+'));\n';
+  return code;
+};
 //GuangGuang MiniCar
 Blockly.Arduino['ggMiniCarInit']=function(block) {
   var L1 = Blockly.Arduino.valueToCode(block, 'L1', Blockly.Arduino.ORDER_ATOMIC);
