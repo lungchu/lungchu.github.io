@@ -20,40 +20,40 @@
     <block type="ggMiniCarInit">
 			<value name="L1">
 				<shadow type="math_number">
-					<field name="NUM">25</field>
+					<field name="NUM">32</field>
 				</shadow>
 			</value>
 			<value name="L2">
 			  <shadow type="math_number">
-				  <field name="NUM">26</field>
+				  <field name="NUM">33</field>
 			  </shadow>
 			</value>
       <field name="LeftReverse">FALSE</field>
 			<value name="R1">
 				<shadow type="math_number">
-					<field name="NUM">32</field>
+					<field name="NUM">16</field>
 				</shadow>
 			</value>
 			<value name="R2">
 				<shadow type="math_number">
-					<field name="NUM">33</field>
+					<field name="NUM">17</field>
 				</shadow>
 			</value>
        <field name="RightReverse">FALSE</field>
     </block>
     <block type="ggMiniCarInit4WD">
-		  <field name="LF1">16</field>
-		  <field name="LF2">17</field>
+		  <field name="LF1">32</field>
+		  <field name="LF2">33</field>
 		  <field name="LeftFrontReverse">FALSE</field>
 		  <field name="RF1">18</field>
 		  <field name="RF2">19</field>
-		  <field name="RightRearReverse">FALSE</field>
+		  <field name="RightFrontReverse">FALSE</field>
 		  <field name="LR1">25</field>
 		  <field name="LR2">26</field>
 		  <field name="LeftRearReverse">FALSE</field>
-		  <field name="RR1">32</field>
-		  <field name="RR2">33</field>
-		  <field name="RightFrontReverse">FALSE</field>
+		  <field name="RR1">16</field>
+		  <field name="RR2">17</field>
+		  <field name="RightRearReverse">FALSE</field>
     </block>
     <block type="ggMiniCarInitUS">
       <field name="SensorPos">Left</field>
