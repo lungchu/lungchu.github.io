@@ -367,6 +367,12 @@ Blockly.Arduino['ggPS3_YPPS3_MAC']=function(block) {
   Mac='"'+Mac+'"';
   return Mac;
 };
+
+Blockly.Arduino['ggPS3_TSPS3_MAC']=function(block) {
+  var Mac= block.getFieldValue('MAC');
+  Mac='"'+Mac+'"';
+  return Mac;
+};
 // PS4 Controller採用Bluepad32
 Blockly.Arduino['ggBP32Init']=function(block) {
 //  Blockly.Arduino.definitions_['ggBP32Init'] = '#include <Bluepad32.h>\n\nGamepadPtr ggGamepadBP32;\n\nvoid onConnectedBluepad32(GamepadPtr gp) {\n  if (ggGamepadBP32 == nullptr) {\n    Serial.println("CALLBACK: Gamepad is connected");\n    GamepadProperties properties = gp->getProperties();\n    Serial.printf("Gamepad model: %s, VID=0x%04x, PID=0x%04x\\n", gp->getModelName().c_str(), properties.vendor_id,properties.product_id);\n    ggGamepadBP32 = gp;\n  } else {\n    Serial.println("CALLBACK: Another Gamepad connected, but another one is used");\n  }\n}\n\nvoid onDisconnectedBluepad32(GamepadPtr gp) {\n  if (ggGamepadBP32 == gp) {\n    Serial.println("CALLBACK: Gamepad is disconnected.");\n    ggGamepadBP32 = nullptr;\n  } else {\n    Serial.println("CALLBACK: Gamepad disconnected, but not useed");\n  }\n}\n';

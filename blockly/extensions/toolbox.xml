@@ -339,10 +339,13 @@
       </value>
     </block>
     <block type="ggPS3_GGPS3_MAC">
-      <field name="MAC">52:E5:1E:87:3E:C4</field>
+      <field name="MAC">76:4C:3F:00:1B:95</field>
     </block>
     <block type="ggPS3_YPPS3_MAC">
-      <field name="MAC">42:CD:66:CF:4A:84</field>
+      <field name="MAC">76:4C:3F:0F:19:FC</field>
+    </block>
+    <block type="ggPS3_TSPS3_MAC">
+      <field name="MAC">76:4C:3F:1B:64:7A</field>
     </block>
 	</category>
 <!-- 光光PS4採用Bluepad32 -->
