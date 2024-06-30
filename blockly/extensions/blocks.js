@@ -846,7 +846,6 @@ Blockly.Blocks['ggPS3_TSPS3_MAC'] = {
     this.setHelpUrl("");
   }
 };
-
 // PS4 Controller 採用Bluepad32
 Blockly.Blocks['ggBP32Init'] = {
   init: function() {
