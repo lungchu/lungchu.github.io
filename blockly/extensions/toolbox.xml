@@ -104,25 +104,25 @@
     </block>
     <block type="ggMiniCarLineAdjust">
 			<value name="LineAdjust">
-				<block type="math_number">
+				<shadow type="math_number">
 					<field name="NUM">0</field>
-				</block>
+				</shadow>
 			</value>
     </block>
     <block type="ggMiniCarSetSpeed">
 			<value name="Speed">
-				<block type="math_number">
+				<shadow type="math_number">
 					<field name="NUM">80</field>
-				</block>
+				</shadow>
 			</value>
     </block>
     <block type="ggMiniCarMove">
 			<field name="MoveType">Forward</field>
 			<field name="MyTurn">Low</field>
 			<value name="ArcSpeed">
-				<block type="math_number">
+				<shadow type="math_number">
 					<field name="NUM">20</field>
-				</block>
+				</shadow>
 			</value>
     </block>
     <block type="ggMiniCarMecanumMove">
@@ -191,50 +191,50 @@
     <category name="ggMiniCarServo">
       <block type="ggMiniCar_servo_custom_attach">
 			  <value name="PIN">
-				  <block type="math_number">
-					  <field name="NUM">0</field>
-				  </block>
-			  </value>
-			  <value name="MAX">
-				  <block type="math_number">
-					  <field name="NUM">544</field>
-				  </block>
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
 			  </value>
 			  <value name="MIN">
-				  <block type="math_number">
-					  <field name="NUM">2400</field>
-				  </block>
+					<shadow type="math_number">
+						<field name="NUM">544</field>
+					</shadow>
+			  </value>
+			  <value name="MAX">
+					<shadow type="math_number">
+						<field name="NUM">2400</field>
+					</shadow>
 			  </value>
       </block>
 		  <block type="ggMiniCar_servo_write">
 			  <value name="PIN">
-				  <block type="math_number">
-					  <field name="NUM">0</field>
-				  </block>
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
 			  </value>
 			  <value name="ANGLE">
-				  <block type="math_number">
-					  <field name="NUM">0</field>
-				  </block>
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
 			  </value>
 		  </block>
 		  <block type="ggMiniCar_servo_writeus">
 			  <value name="PIN">
-				  <block type="math_number">
-					  <field name="NUM">0</field>
-				  </block>
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
 			  </value>
 			  <value name="ANGLE_US">
-				  <block type="math_number">
-					  <field name="NUM">1500</field>
-				  </block>
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
 			  </value>
 		  </block>
 		  <block type="ggMiniCar_servo_read">
   			<value name="PIN">
-				  <block type="math_number">
-					  <field name="NUM">0</field>
-				  </block>
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
 			  </value>
     	</block>
   	</category>
@@ -295,9 +295,9 @@
     <block type="ggPS3Init">
       <field name="MacType">Custom</field>
       <value name="Mac">
-		    <block type="text">
+				<shadow type="text">
 			    <field name="TEXT">01:02:03:04:05:06</field>
-		    </block>
+		    </shadow>
 			</value>
     </block>
     <block type="ggPS3IsConnect"></block>
@@ -319,33 +319,36 @@
     </block>
     <block type="ggPS3_Event_Callback">
       <value name="Func_Name">
-        <block type="text">
+				<shadow type="text">
           <field name="TEXT">PS3EventCallback</field>
-        </block>
+		    </shadow>
       </value>
     </block>
     <block type="ggPS3_OnConnect_Callback">
       <value name="Func_Name">
-        <block type="text">
+				<shadow type="text">
           <field name="TEXT">PS3OnConnectCallback</field>
-        </block>
+		    </shadow>
       </value>
     </block>
     <block type="ggPS3_DisConnect_Callback">
       <value name="Func_Name">
-        <block type="text">
+				<shadow type="text">
           <field name="TEXT">PS3DisConnectCallback</field>
-        </block>
+		    </shadow>
       </value>
     </block>
     <block type="ggPS3_GGPS3_MAC">
-      <field name="MAC">52:E5:1E:87:3E:C4</field>
+      <field name="MAC">76:4C:3F:07:34:7D</field>
     </block>
-    <block type="ggPS3_YPPS3_MAC">
-      <field name="MAC">42:CD:66:CF:4A:84</field>
+    <block type="ggPS3_GHPS3_MAC">
+      <field name="MAC">76:4C:3F:22:57:C7</field>
     </block>
     <block type="ggPS3_TSPS3_MAC">
-      <field name="MAC">42:CD:66:CF:4A:84</field>
+      <field name="MAC">76:4C:3F:1F:51:B4</field>
+    </block>
+    <block type="ggPS3_YPPS3_MAC">
+      <field name="MAC">76:4C:3F:12:DC:ED</field>
     </block>
 	</category>
 <!-- 光光PS4採用Bluepad32 -->
@@ -405,9 +408,9 @@
     <block type="ggDabble_Begin">
       <field name="BleMode">ESP32</field>
       <value name="BleName">
-		    <block type="text">
-			    <field name="TEXT">I.AM.GG</field>
-		    </block>
+				<shadow type="text">
+          <field name="TEXT">I.AM.GG</field>
+		    </shadow>
 			</value>
       <field name="SerialMode">Serial</field>
       <value name="Baud">

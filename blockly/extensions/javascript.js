@@ -362,13 +362,19 @@ Blockly.Arduino['ggPS3_GGPS3_MAC']=function(block) {
   return Mac;
 };
 
-Blockly.Arduino['ggPS3_YPPS3_MAC']=function(block) {
+Blockly.Arduino['ggPS3_GHPS3_MAC']=function(block) {
   var Mac= block.getFieldValue('MAC');
   Mac='"'+Mac+'"';
   return Mac;
 };
 
 Blockly.Arduino['ggPS3_TSPS3_MAC']=function(block) {
+  var Mac= block.getFieldValue('MAC');
+  Mac='"'+Mac+'"';
+  return Mac;
+};
+
+Blockly.Arduino['ggPS3_YPPS3_MAC']=function(block) {
   var Mac= block.getFieldValue('MAC');
   Mac='"'+Mac+'"';
   return Mac;

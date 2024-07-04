@@ -825,10 +825,10 @@ Blockly.Blocks['ggPS3_GGPS3_MAC'] = {
   }
 };
 
-Blockly.Blocks['ggPS3_YPPS3_MAC'] = {
+Blockly.Blocks['ggPS3_GHPS3_MAC'] = {
   init: function() {
     this.appendDummyInput()
-    .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_PS3_YP_MACADDR), "MAC");
+    .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_PS3_GH_MACADDR), "MAC");
     this.setOutput(true, "");
     this.setColour(Blockly.Msg["HUE_GG_PS3"]);
     this.setTooltip("");
@@ -840,6 +840,17 @@ Blockly.Blocks['ggPS3_TSPS3_MAC'] = {
   init: function() {
     this.appendDummyInput()
     .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_PS3_TS_MACADDR), "MAC");
+    this.setOutput(true, "");
+    this.setColour(Blockly.Msg["HUE_GG_PS3"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['ggPS3_YPPS3_MAC'] = {
+  init: function() {
+    this.appendDummyInput()
+    .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_PS3_YP_MACADDR), "MAC");
     this.setOutput(true, "");
     this.setColour(Blockly.Msg["HUE_GG_PS3"]);
     this.setTooltip("");
