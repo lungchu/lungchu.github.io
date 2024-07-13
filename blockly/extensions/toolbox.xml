@@ -350,6 +350,9 @@
     <block type="ggPS3_YPPS3_MAC">
       <field name="MAC">76:4C:3F:12:DC:ED</field>
     </block>
+    <block type="ggPS3_FFPS3_MAC">
+      <field name="MAC">76:4C:3F:21:8E:6D</field>
+    </block>
 	</category>
 <!-- 光光PS4採用Bluepad32 -->
 	<category name="ggBP32">

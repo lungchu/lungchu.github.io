@@ -857,6 +857,17 @@ Blockly.Blocks['ggPS3_YPPS3_MAC'] = {
     this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['ggPS3_FFPS3_MAC'] = {
+  init: function() {
+    this.appendDummyInput()
+    .appendField(new Blockly.FieldDropdown(Blockly.Msg.GG_PS3_FF_MACADDR), "MAC");
+    this.setOutput(true, "");
+    this.setColour(Blockly.Msg["HUE_GG_PS3"]);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
 // PS4 Controller 採用Bluepad32
 Blockly.Blocks['ggBP32Init'] = {
   init: function() {
